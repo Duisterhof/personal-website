@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Bardienus Duisterhof</title>
+  
+  <meta name="author" content="Bardienus Duisterhof">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" type="image/png" href="images/seal_icon.png">
+
+  <!-- Global site tag (gtag.js) - Google Analytics DO NOT COPY THIS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75286303-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-75286303-1');
+</script>
+
+</head>
+ 
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name>Bardienus Pieter Duisterhof</name>
+              </p>
+                <p style="text-align:center">
+                  <strong>Email:</strong> bduister@cs.cmu.edu
+                </p>
+             I am a Ph.D. student at Carnegie Mellon University (CMU), in the <a href="https://www.ri.cmu.edu/"> Robotics Institute</a> advised by <a href="https://www.ri.cmu.edu/ri-faculty/sebastian-scherer/">Sebastian Scherer</a>. 
+             Before coming to CMU, I completed a Bachelor's and Master's degree in Aerospace Engineering at Delft University of Technology, in the Netherlands. 
+             Advised by <a href="http://www.bene-guido.eu/wordpress/">Guido de Croon</a>, I studied efficient bio-inspired algorithms for autonomous flight of tiny flying drones. 
+             In 2019 I was a visiting student at <a href="https://edge.seas.harvard.edu/">Vijay Janapa Reddi's Edge Computing lab</a>, at Harvard University, where we studied Deep Reinforcement Learning for tiny robots. 
+             My research focus continues to be on <strong>efficient AI</strong> for fully autonomous operation of resource-constrained miniature robots.
+             At the intersection of computer vision, machine learning, and systems, I hope to contribute to a future where robots are affordable, safe, and useful.
+             <br>
+             <br>
+             
+              <p style="text-align:center">
+                <a href="data/CV.pdf">CV</a> &nbsp/&nbsp
+                <a href="https://scholar.google.com/citations?user=LLsYMFYAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
+                <a href="https://twitter.com/bduisterhof">Twitter</a> &nbsp/&nbsp
+                <a href="https://www.linkedin.com/in/duisterhof/">LinkedIn</a> &nbsp/&nbsp
+                <a href="https://github.com/duisterhof/">Github</a>
+              </p>
+            </td>
+            <td style="padding:2.5%;width:25%;max-width:25%">
+              <a href="images/avatar.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/avatar.jpg" class="hoverZoomLink"></a>
+            </td>
+          </tr>
+        </tbody></table>
+        
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Research</heading>
+              <p>
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+          <tr onmouseout="sniffy_stop()" onmouseover="sniffy_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='sniffy_image'><video  width=100% height=100% muted autoplay loop>
+                <source src="images/sniffy_square.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='images/sniffy.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function sniffy_start() {
+                  document.getElementById('sniffy_image').style.opacity = "1";
+                }
+
+                function sniffy_stop() {
+                  document.getElementById('sniffy_image').style.opacity = "0";
+                }
+                sniffy_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2107.05490">
+              <papertitle>Sniffy Bug: A Fully Autonomous Swarm of Gas-Seeking Nano Quadcopters in Cluttered Environments</papertitle>
+              </a>
+              <br>
+              <strong>Bardienus P Duisterhof</strong>,
+              <a href="https://shushuai3.github.io/">Shushuai Li</a>,
+              <a href="https://www.javierburgues.com/">Javier Burgués</a>,
+              <a href="https://scholar.harvard.edu/vijay-janapa-reddi/home"> Vijay Janapa Reddi</a>,
+              <a href="http://www.bene-guido.eu/wordpress/"> Guido C.H.E. de Croon</a>
+              <br>
+							<em>IROS</em>, 2021 
+              <br>
+      
+              <a href="https://arxiv.org/abs/2107.05490">arXiv</a>
+              /
+              <a href="https://www.youtube.com/watch?v=hj_SBSpK5qg">video</a>
+              /
+              <a href="https://github.com/tudelft/sniffy-bug">code</a>
+              <p></p>
+              <p>We have developed a swarm of autonomous, tiny drones that is able to localize gas sources in unknown, cluttered environments. Bio-inspired AI allows the drones to tackle this complex task without any external infrastructure.</p>
+            </td>
+
+
+            </tr>
+
+          <tr onmouseout="tinyrl_stop()" onmouseover="tinyrl_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='tinyrl_image'><video  width=100% height=100% muted autoplay loop>
+                <source src="images/tinyrl.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='images/tinyrl.jpg' width="160">
+              </div>
+              <script type="text/javascript">
+                function tinyrl_start() {
+                  document.getElementById('tinyrl_image').style.opacity = "1";
+                }
+
+                function tinyrl_stop() {
+                  document.getElementById('tinyrl_image').style.opacity = "0";
+                }
+                tinyrl_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://storage.googleapis.com/pub-tools-public-publication-data/pdf/9d61bdd2dc56c22a5d93cb78f07a70ebe3521052.pdf">
+              <papertitle>Tiny Robot Learning (tinyRL) for Source Seeking
+                on a Nano Quadcopter</papertitle>
+              </a>
+              <br>
+              <strong>Bardienus P Duisterhof</strong>,
+              <a href="https://scholar.harvard.edu/srivatsan-krishnan"> Srivatsan Krishnan</a>,
+              Jonathan J. Cruz, 
+              <a href="https://www.colbybanbury.com/"> Colby R. Banbury</a>,
+              William Fu, 
+              <a href="https://www.afaust.info/">  Aleksandra Faust </a>,
+              <a href="http://www.bene-guido.eu/wordpress/"> Guido C.H.E. de Croon</a>,
+              <a href="https://scholar.harvard.edu/vijay-janapa-reddi/home"> Vijay Janapa Reddi</a>
+              <br>
+							<em>ICRA</em>, 2021 
+              <br>
+      
+              <a href="https://storage.googleapis.com/pub-tools-public-publication-data/pdf/9d61bdd2dc56c22a5d93cb78f07a70ebe3521052.pdf">paper</a>
+              /
+              <a href="https://www.youtube.com/watch?v=wmVKbX7MOnU">video</a>
+              /
+              <a href="https://github.com/harvard-edge/source-seeking">code</a>
+              <p></p>
+              <p>We present fully autonomous source seeking onboard a highly constrained nano quadcopter, by contributing application-specific system and observation feature design to enable inference of a deep-RL policy onboard a nano quadcopter. </p>
+            </td>
+
+
+            </tr>
+
+            <tr onmouseout="delfly_stop()" onmouseover="delfly_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='delfly_image'><video  width=100% height=100% muted autoplay loop>
+                  <source src="images/delfly.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/delfly.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function delfly_start() {
+                    document.getElementById('delfly_image').style.opacity = "1";
+                  }
+  
+                  function delfly_stop() {
+                    document.getElementById('delfly_image').style.opacity = "0";
+                  }
+                  delfly_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://www.worldscientific.com/doi/10.1142/S2301385020500235">
+                <papertitle>A Tailless Flapping Wing MAV Performing Monocular Visual Servoing Tasks  </papertitle>
+                </a>
+                <br>
+                Diana A. Olejnik, 
+                <strong>Bardienus P Duisterhof</strong>,
+                <a href="https://www.matejkarasek.eu/wp/">Matej Karásek </a>, 
+                Kirk Y. W. Scheper, 
+                Tom van Dijk,
+                <a href="http://www.bene-guido.eu/wordpress/"> Guido C.H.E. de Croon</a>
+                <br>
+                <em>Unmanned Systems, Vol. 08, No. 04, pp. 287-294 </em>, 2020 
+                <br>
+        
+                <a href="https://www.worldscientific.com/doi/10.1142/S2301385020500235">paper</a>
+                /
+                <a href="https://www.youtube.com/watch?v=GoZ1WmADGbk">video</a>
+                <p></p>
+                <p>This paper describes the computer vision and control algorithms used to achieve autonomous flight with the ∼30g tailless flapping wing robot, used to participate in the International Micro Air Vehicle Conference and Competition (IMAV 2018) indoor microair vehicle competition. </p>
+              </td>
+  
+  
+              </tr>
+
+
+
+        </tbody></table>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+          <tr>
+            <td>
+              <heading>Teaching</heading>
+            </td>
+          </tr>
+        </tbody></table>
+        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
+          <tr>
+            <td width="75%" valign="center">
+              <a href="https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=38992">AE2235-I: Aerospace Systems & Control Theory</a>
+
+            </td>
+          </tr>
+          
+        </tbody></table>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+          <tr>
+            <td>
+              <heading>Media Coverage</heading>
+            </td>
+          </tr>
+        </tbody></table>
+        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
+          <tr>
+            <td width="75%" valign="center">
+              <a href="https://www.forbes.com/sites/davidhambling/2021/07/15/watch-this-autonomous-microdrone-swarm-sniff-out-a-gas-leak/">Forbes</a> <br>
+              <a href="https://spectrum.ieee.org/video-friday-fluidic-fingers">IEEE Spectrum Video Friday</a> <br>
+              <a href="https://robohub.org/sniffy-bug-a-fully-autonomous-swarm-of-gas-seeking-nano-quadcopters-in-cluttered-environments/">Robohub</a> <br>
+              <a href="https://www.bitcraze.io/author/bart/">Bitcraze Blog</a> <br>
+              <a href="https://www.youtube.com/watch?v=BJhYaLf_n8g"> PiXL Drone Show</a>
+
+            </td>
+          </tr>
+          
+        </tbody></table>
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+          <tr>
+            <td>
+              <heading>Awards</heading>
+            </td>
+          </tr>
+        </tbody></table>
+        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
+          <tr>
+            <td width="75%" valign="center">
+              <a href="https://www.tudelft.nl/en/stories/articles/stronger-together-swarm-mini-drones-sniff-out-gas-leaks">Best Graduate in Engineering, TU Delft, academic year 2020-2021</a> <br>
+              <a href="https://www.tudelft.nl/en/stories/articles/stronger-together-swarm-mini-drones-sniff-out-gas-leaks">Best Graduate in Aerospace Engineering, TU Delft, academic year 2020-2021</a> <br>
+              <a href="https://www.youtube.com/watch?v=GoZ1WmADGbk">Innovation Award, IMAV 2018 Autonomous Drone Race</a> <br>           
+
+            </td>
+          </tr>
+          
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:0px">
+              <br>
+              <p style="text-align:right;font-size:small;">
+                Modified version of template from <a href="https://github.com/jonbarron/jonbarron_website"> here</a>
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
