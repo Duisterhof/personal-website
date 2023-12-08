@@ -49,7 +49,6 @@
             <strong>Students </strong> </p> I am always looking for collaborators, shoot me an email if you would like to work with me!
 
               <p style="text-align:center">
-                <a href="data/CV.pdf">CV</a> &nbsp/&nbsp
                 <a href="https://scholar.google.com/citations?user=LLsYMFYAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
                 <a href="https://twitter.com/bduisterhof">Twitter</a> &nbsp/&nbsp
                 <a href="https://www.linkedin.com/in/duisterhof/">LinkedIn</a> &nbsp/&nbsp
@@ -69,6 +68,8 @@
             <p>
               <!--bullet points with news-->
               <ul>
+                <li>                [November, 2023] Check out our recent work on  <a href="https://md-splatting.github.io">MD-Splatting</a>, a method for dense tracking and novel view synthesis of cloth 🧣. </p>
+                </li>
                 <li>                [July, 2023] Our paper on NeRFs for transparent objects has been accepted for a 🌟spotlight🌟 presentation at the  <a href="https://sites.google.com/view/iccv23trickyworkshop">ICCV23 - TRICKY Workshop</a>. </p>
                 </li>
                 <li>                [April, 2023] Thanks to the <a href="https://www.cs.cmu.edu/cmlh/">CMLH Fellowship in Digital Health Innovation</a> for generously supporting my research! </p>
@@ -89,6 +90,59 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+
+          <tr onmouseout="md_splatting_stop()" onmouseover="md_splatting_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='md-splatting-vid'><video  width=100% height=100% muted autoplay loop>
+                <source src="images/md-splatting.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='images/md-splatting.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function md_splatting_start() {
+                  document.getElementById('md-splatting-vid').style.opacity = "1";
+                }
+
+                function md_splatting_stop() {
+                  document.getElementById('md-splatting-vid').style.opacity = "0";
+                }
+                tartancalib_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2210.02511">
+              <papertitle>MD-Splatting: Learning Metric Deformation from 4D Gaussians in Highly Deformable Scenes
+              </papertitle>
+              </a>
+              <br>
+              <strong>Bardienus P. Duisterhof</strong>,
+              <a href="https://mandizhao.github.io/"> Zhao Mandi</a>,
+              <a href="https://www.ri.cmu.edu/ri-people/yunchao-yao/"> Yunchao Yao</a>,
+              <a href="https://jia-wei-liu.github.io/">  Jia-Wei Liu</a>,
+              <a href="https://sites.google.com/view/showlab">  Mike Zheng Shou</a>,
+              <a href="https://shurans.github.io/">   Shuran Song</a>,
+              <a href="https://ichnow.ski/">   Jeffrey Ichnowski</a>
+              <!-- <br>
+							<em>Under Review</em>  -->
+              <br>
+              <a href="https://md-splatting.github.io/">project website</a>
+              /
+              <a href="https://arxiv.org/abs/2312.00583">arXiv</a>
+              /
+              <a href="https://drive.google.com/drive/folders/116XTLBUvuiEQPjKXKZP8fYab3F3L1cCd?usp=sharing">data</a>
+              /
+              <a href="https://github.com/momentum-robotics-lab/md-splatting">code</a>
+              <p></p>
+              <p>Deformable objects are common in household, industrial and healthcare settings. Tracking them would unlock many applications in robotics, gen-AI, and AR.
+
+                How? Check out MD-Splatting: a method for dense 3D tracking and dynamic novel view synthesis on deformable cloths.</p>
+            </td>
+          </tr>
+
+
 
           <tr onmouseout="tartancalib_stop()" onmouseover="tartancalib_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
@@ -133,7 +187,7 @@
               <p></p>
               <p>In this work we present our methodology for accurate wide-angle calibration. Our pipeline generates an intermediate model, and leverages it to iteratively improve feature detection and eventually the camera parameters. </p>
             </td>
-
+          </tr>
 
 
 
@@ -294,7 +348,13 @@
         <table width="100%" align="center" border="0" cellpadding="20"><tbody>
           <tr>
             <td width="75%" valign="center">
-              <a href="https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=38992">AE2235-I: Aerospace Systems & Control Theory</a>
+              <a href="https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=38992">AE2235-I: Aerospace Systems & Control Theory/</a>
+
+            </td>
+          </tr>
+          <tr>
+            <td width="75%" valign="center">
+              <a href=" https://16820advancedcv.github.io/">16-820 at CMU: Advanced Computer Vision/</a>
 
             </td>
           </tr>
