@@ -36,15 +36,17 @@
                 </p>
              <strong>Bio </strong> </p>
              I am a Ph.D. student at Carnegie Mellon University (CMU), in the <a href="https://www.ri.cmu.edu/"> Robotics Institute</a> advised by <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>. 
+             I am currently a research intern in the DUSt3R Group at NAVER Labs Europe, advised by <a href="https://europe.naverlabs.com/people_user_naverlabs/j%C3%A9rome-revaud/">Jérome Revaud</a> and <a href="https://europe.naverlabs.com/people_user_naverlabs/vincent-leroy/">Vincent Leroy</a>.
              My interests lie at the intersection of perception and robot manipulation of challenging objects, such as (transparent) deformables. 
-             I am a recipient of the 2023 <a href="https://www.cs.cmu.edu/cmlh/">CMLH Fellowship in Digital Health Innovation</a>.
+             I am a recipient of the 2023 <a href="https://www.cs.cmu.edu/cmlh/">CMLH Fellowship in Digital Health Innovation</a>. 
+             
              
               </p>
              During my first year at CMU I worked with <a href="https://www.ri.cmu.edu/ri-faculty/sebastian-scherer/"> Sebastian Scherer </a>, where we focused on geometric camera calibration.        
              Prior to that I completed a Bachelor's and Master's degree in Aerospace Engineering at Delft University of Technology, in the Netherlands. Advised by <a href="http://www.bene-guido.eu/wordpress/">Guido de Croon</a>, I studied efficient bio-inspired algorithms for fully autonomous nano drones.
              In 2019 I was a visiting student at <a href="https://edge.seas.harvard.edu/">Vijay Janapa Reddi's Edge Computing lab</a>, at Harvard University, where we studied Deep Reinforcement Learning for tiny robots.  
             </p>
-             I am passionate about creating a future where complex robotic automation is scalable, safe, and beneficial, with a particular interest in medical applications. 
+             I am passionate about creating a future where complex robotic automation is scalable, safe, and beneficial. 
             </p>
             <strong>Students </strong> </p> I am always looking for collaborators, shoot me an email if you would like to work with me!
 
@@ -68,6 +70,19 @@
             <p>
               <!--bullet points with news-->
               <ul>
+                <li>
+                  [September, 2024] <a href="https://kth-rpl.github.io/cloth-splatting/">Cloth-Splatting</a> has been accepted at <a href="https://www.corl.org/">CoRL 2024</a>!
+                </p>
+                </li>
+                <li>
+                  [August, 2024] <a href="https://deformgs.github.io/">DeformGS</a> has been accepted at <a href="https://www.algorithmic-robotics.org/">WAFR 2024</a>!
+                </p>
+                </li>
+                <li>
+                  [July, 2024] I started my internship at NAVER Labs Europe! Excited to work with Jérome Revaud, Vincent Leroy and the rest of the DUSt3R team. 
+                </p>
+                </li>
+                
                 <li>                [January, 2024] 2 papers accepted at <a href="https://2024.ieee-icra.org/">ICRA 2024</a>! See you in Japan 🇯🇵. </p>
 
                 </li>
@@ -94,42 +109,44 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-
-          <tr onmouseout="md_splatting_stop()" onmouseover="md_splatting_start()">
+          <tr onmouseout="deformgs_stop()" onmouseover="deformgs_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
-                <div class="two" id='md-splatting-vid'><video  width=100% height=100% muted autoplay loop>
-                <source src="images/md-splatting.mp4" type="video/mp4">
+                <div class="two" id='deformgs-vid'><video  width=100% height=100% muted autoplay loop>
+                <source src="images/deformgs.mp4" type="video/mp4">
                 Your browser does not support the video tag.
                 </video></div>
-                <img src='images/md-splatting.png' width="160">
               </div>
               <script type="text/javascript">
-                function md_splatting_start() {
-                  document.getElementById('md-splatting-vid').style.opacity = "1";
+                function deformgs_start() {
+                  document.getElementById('deformgs-vid').style.opacity = "1";
                 }
 
-                function md_splatting_stop() {
-                  document.getElementById('md-splatting-vid').style.opacity = "1";
+                function deformgs_stop() {
+                  document.getElementById('deformgs-vid').style.opacity = "1";
                 }
-                md_splatting_stop()
+                deformgs_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://md-splatting.github.io">
-              <papertitle>MD-Splatting: Learning Metric Deformation from 4D Gaussians in Highly Deformable Scenes
+              <a href="https://deformgs.github.io">
+              <papertitle>DeformGS: Scene Flow in Highly Deformable Scenes for Deformable Object Manipulation
               </papertitle>
               </a>
               <br>
               <strong>Bardienus P. Duisterhof</strong>,
-              <a href="https://mandizhao.github.io/"> Zhao Mandi</a>,
-              <a href="https://www.ri.cmu.edu/ri-people/yunchao-yao/"> Yunchao Yao</a>,
-              <a href="https://jia-wei-liu.github.io/">  Jia-Wei Liu</a>,
-              <a href="https://sites.google.com/view/showlab">  Mike Zheng Shou</a>,
-              <a href="https://shurans.github.io/">   Shuran Song</a>,
-              <a href="https://ichnow.ski/">   Jeffrey Ichnowski</a>
-              <!-- <br>
-							<em>Under Review</em>  -->
+              <a href="https://mandizhao.github.io/">Zhao Mandi</a>,
+              <a href="https://www.ri.cmu.edu/ri-people/yunchao-yao/">Yunchao Yao</a>,
+              <a href="https://jia-wei-liu.github.io/">Jia-Wei Liu</a>,
+              <a href="https://jennyseidenschwarz.github.io/">Jenny Seidenschwarz</a>,
+              <a href="https://sites.google.com/view/showlab">Mike Zheng Shou</a>,
+              <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>
+              <a href="https://shurans.github.io/">Shuran Song</a>,
+              <a href="https://research.nvidia.com/person/stan-birchfield">Stan Birchfield</a>,
+              <a href="https://wenbowen123.github.io/">Bowen Wen</a>,
+              <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>
+              <br>
+							<em>WARF 2024</em> 
               <br>
               <a href="https://md-splatting.github.io/">project website</a>
               /
@@ -138,10 +155,199 @@
               <a href="https://drive.google.com/drive/folders/116XTLBUvuiEQPjKXKZP8fYab3F3L1cCd?usp=sharing">data</a>
               /
               <a href="https://github.com/momentum-robotics-lab/md-splatting">code</a>
+              /
+              <a href="https://x.com/BDuisterhof/status/1829170197829431695">X thread</a>
               <p></p>
               <p>Deformable objects are common in household, industrial and healthcare settings. Tracking them would unlock many applications in robotics, gen-AI, and AR.
 
-                How? Check out MD-Splatting: a method for dense 3D tracking and dynamic novel view synthesis on deformable cloths.</p>
+                How? Check out DeformGS: a method for dense 3D tracking and dynamic novel view synthesis on deformable cloths in the real world.</p>
+            </td>
+          </tr>
+
+
+
+
+          <tr onmouseout="clothsplatting_stop()" onmouseover="clothsplatting_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='clothsplatting-vid'><video  width=100% height=100% muted autoplay loop>
+                <source src="images/clothsplatting.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video></div>
+              </div>
+              
+              
+              <script type="text/javascript">
+                function clothsplatting_start() {
+                  document.getElementById('clothsplatting-vid').style.opacity = "1";
+                }
+
+                function clothsplatting_stop() {
+                  document.getElementById('clothsplatting-vid').style.opacity = "1";
+                }
+                clothsplatting_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://kth-rpl.github.io/cloth-splatting/">
+              <papertitle>Cloth-Splatting: 3D State Estimation from RGB Supervision for Deformable Objects
+              </papertitle>
+              </a>
+              <br>
+              <a href="https://albilo17.github.io/">Alberta Longhini*</a>,
+              <a href="https://buesma.github.io/">Marcel Büsching*</a>,
+              <strong>Bardienus P. Duisterhof</strong>,
+              <a href="http://jenslundell.ai/">Jens Lundell</a>,
+              <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>,
+              <a href="https://www.kth.se/profile/celle">Mårten Björkman</a>
+              <a href="https://www.kth.se/profile/dani">Danica Kragic</a>
+
+              <br>
+							<em>CoRL 2024</em> 
+              <br>
+              <a href="https://kth-rpl.github.io/cloth-splatting/">project website</a>
+              /
+              <a href="https://openreview.net/forum?id=WmWbswjTsi">paper</a>
+              <p></p>
+              <p> We present Cloth-Splatting: a method for accurate state estimation of deformable objects from RGB supervision. 
+                Cloth-Splatting leverages a GNN as a prior to improve tracking accuracy and speed up convergence.</p>
+            </td>
+          </tr>
+
+
+          <tr onmouseout="dynomo_stop()" onmouseover="dynomo_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='dynomo-vid'><video  width=100% height=100% muted autoplay loop>
+                  Your browser does not support the video tag.
+                </video></div>
+                <img src='images/dynomo.png' width="160">
+              </div>
+              
+              
+              <script type="text/javascript">
+                function dynomo_start() {
+                  document.getElementById('dynomo-vid').style.opacity = "1";
+                }
+
+                function dynomo_stop() {
+                  document.getElementById('dynomo-vid').style.opacity = "1";
+                }
+                dynomo_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2409.02104">
+              <papertitle>DynOMo: Online Point Tracking by Dynamic Online Monocular Gaussian Reconstruction
+              </papertitle>
+              </a>
+              <br>
+              <a href="https://jennyseidenschwarz.github.io/">Jenny Seidenschwarz</a>,
+              <a href="https://dvl.in.tum.de/team/zhouq/">Qunjie Zhou</a>,
+              <strong>Bardienus P. Duisterhof</strong>,
+              <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>
+              <a href="https://dvl.in.tum.de/team/lealtaixe/">Laura Leal-Taixé</a>
+
+              <br>
+							<em>Under Review</em> 
+              <br>
+              <a href="https://arxiv.org/abs/2409.02104">arXiv</a>
+              <p></p>
+              <p> Online 3D tracking can unlock many new applications in robotics, AR and VR. Most prior works have focused on offline tracking, requiring an entire sequence of posed images. 
+                Here we present DynOMo, a method for simultaneous 3D tracking, 3D reconstruction, novel view synthesis and pose estimation!</p>
+            </td>
+          </tr>
+
+          <tr onmouseout="residualnerf_stop()" onmouseover="residualnerf_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='residualnerf_image'><video  width=100% height=100% muted autoplay loop>
+                Your browser does not support the video tag.
+                <source src="images/residual_nerf.mp4" type="video/mp4"> 
+                </video></div>
+                
+              </div>
+              <script type="text/javascript">
+                function residualnerf_start() {
+                  document.getElementById('residualnerf_image').style.opacity = "1";
+                }
+
+                function residualnerf_stop() {
+                  document.getElementById('residualnerf_image').style.opacity = "1";
+                }
+                residualnerf_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://residual-nerf.github.io/">
+              <papertitle>Residual-NeRF: Learning Residual NeRFs for Transparent Object Manipulation
+              </papertitle>
+              </a>
+              <br>
+              <strong>Bardienus P. Duisterhof</strong>,
+              <a href="https://yueminm.github.io/">Yuemin Mao</a>,
+              <a href="https://www.ri.cmu.edu/ri-people/si-heng-teng/">Si Heng Teng</a>,
+              <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>
+              <br>
+							<em>ICRA 2024</em> 
+              <br>
+              <a href="https://residual-nerf.github.io/">project website</a>
+              /
+              <a href="https://arxiv.org/abs/2405.06181">arXiv</a>
+              /
+              <a href="https://www.youtube.com/watch?v=oA2CkRFI61c">video</a>
+              /
+              <a href="https://github.com/momentum-robotics-lab/residual-nerf">code</a>
+              <p></p>
+              <p>In this work, we propose Residual-NeRF, a method to improve depth perception and training speed for transparent objects. Robots often operate in the same area, such as a kitchen. 
+                By first learning a background NeRF of the scene without transparent objects to be manipulated, we improve depth perception quality and speed up training. 
+              </p>
+            </td>
+          </tr>
+
+          <tr onmouseout="gslbench_stop()" onmouseover="gslbench_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='gslbench_image'><video  width=100% height=100% muted autoplay loop>
+                Your browser does not support the video tag.
+                <source src="images/gslbench.mp4" type="video/mp4"> 
+                </video></div>
+                
+              </div>
+              <script type="text/javascript">
+                function gslbench_start() {
+                  document.getElementById('gslbench_image').style.opacity = "1";
+                }
+
+                function gslbench_stop() {
+                  document.getElementById('gslbench_image').style.opacity = "1";
+                }
+                gslbench_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://sites.google.com/view/gslbench/home">
+              <papertitle>GSL-Bench: High Fidelity Gas Source Localisation Benchmarking
+              </papertitle>
+              </a>
+              <br>
+              Hajo H. Erwich,
+              <strong>Bardienus P. Duisterhof</strong>,
+              <a href="http://www.bene-guido.eu/wordpress/">Guido de Croon</a>
+              <br>
+							<em>ICRA 2024</em> 
+              <br>
+              <a href="https://sites.google.com/view/gslbench/home">project website</a>
+              /
+              <a href="https://ieeexplore.ieee.org/document/10610755">paper</a>
+              /
+              <a href="https://www.youtube.com/watch?v=kZa48WXf_1w">video</a>
+              /
+              <a href="https://github.com/Herwich012/GSL-Bench">code</a>
+              <p></p>
+              <p>Gas-source localization is an important task for autonomous robots. We present GSL-Bench, the first standardized benchmark for gas-source localization. 
+              GSL-Bench uses NVIDIA Isaac Sim for high visual fidelity, and OpenFOAM for realistic gas simulations. 
+              </p>
             </td>
           </tr>
 
@@ -174,13 +380,10 @@
               </a>
               <br>
               <strong>Bardienus P Duisterhof</strong>,
-              <a href="http://www.huyaoyu.com/"> Yaoyu Hu</a>,
+              <a href="http://www.huyaoyu.com/">Yaoyu Hu</a>,
               <a href="https://www.ri.cmu.edu/ri-people/si-heng-teng/">Si Heng Teng</a>,
-              <a href="https://www.cs.cmu.edu/~kaess/">  Michael Kaess</a>,
-              <a href="https://www.ri.cmu.edu/ri-faculty/sebastian-scherer/">  Sebastian Scherer</a>
-              <br>
-							<em>Under Review</em> 
-              <br>
+              <a href="https://www.cs.cmu.edu/~kaess/">Michael Kaess</a>,
+              <a href="https://www.ri.cmu.edu/ri-faculty/sebastian-scherer/">Sebastian Scherer</a>
               <a href="https://tartancalib.com">project website</a>
               /
               <a href="https://arxiv.org/abs/2210.02511">arXiv</a>
@@ -192,10 +395,6 @@
               <p>In this work we present our methodology for accurate wide-angle calibration. Our pipeline generates an intermediate model, and leverages it to iteratively improve feature detection and eventually the camera parameters. </p>
             </td>
           </tr>
-
-
-
-
 
           <tr onmouseout="sniffy_stop()" onmouseover="sniffy_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
@@ -225,8 +424,8 @@
               <strong>Bardienus P Duisterhof</strong>,
               <a href="https://shushuai3.github.io/">Shushuai Li</a>,
               <a href="https://www.javierburgues.com/">Javier Burgués</a>,
-              <a href="https://scholar.harvard.edu/vijay-janapa-reddi/home"> Vijay Janapa Reddi</a>,
-              <a href="http://www.bene-guido.eu/wordpress/"> Guido C.H.E. de Croon</a>
+              <a href="https://scholar.harvard.edu/vijay-janapa-reddi/home">Vijay Janapa Reddi</a>,
+              <a href="http://www.bene-guido.eu/wordpress/">Guido C.H.E. de Croon</a>
               <br>
 							<em>IROS</em>, 2021 
               <br>
@@ -270,13 +469,13 @@
               </a>
               <br>
               <strong>Bardienus P Duisterhof</strong>,
-              <a href="https://scholar.harvard.edu/srivatsan-krishnan"> Srivatsan Krishnan</a>,
+              <a href="https://scholar.harvard.edu/srivatsan-krishnan">Srivatsan Krishnan</a>,
               Jonathan J. Cruz, 
-              <a href="https://www.colbybanbury.com/"> Colby R. Banbury</a>,
+              <a href="https://www.colbybanbury.com/">Colby R. Banbury</a>,
               William Fu, 
-              <a href="https://www.afaust.info/">  Aleksandra Faust </a>,
-              <a href="http://www.bene-guido.eu/wordpress/"> Guido C.H.E. de Croon</a>,
-              <a href="https://scholar.harvard.edu/vijay-janapa-reddi/home"> Vijay Janapa Reddi</a>
+              <a href="https://www.afaust.info/">Aleksandra Faust</a>,
+              <a href="http://www.bene-guido.eu/wordpress/">Guido C.H.E. de Croon</a>,
+              <a href="https://scholar.harvard.edu/vijay-janapa-reddi/home">Vijay Janapa Reddi</a>
               <br>
 							<em>ICRA</em>, 2021 
               <br>
@@ -352,15 +551,21 @@
         <table width="100%" align="center" border="0" cellpadding="20"><tbody>
           <tr>
             <td width="75%" valign="center">
-              <a href="https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=38992">AE2235-I: Aerospace Systems & Control Theory/</a>
+              <a href=" https://16820advancedcv.github.io/">16-820 at CMU: Advanced Computer Vision</a>
 
             </td>
           </tr>
           <tr>
             <td width="75%" valign="center">
-              <a href=" https://16820advancedcv.github.io/">16-820 at CMU: Advanced Computer Vision/</a>
+              <a href="https://sites.google.com/andrew.cmu.edu/16-720-spring-2024/home">16-720 at CMU: Introduction to Computer Vision</a>
 
             </td>
+            <tr>
+              <td width="75%" valign="center">
+                <a href="https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=38992">AE2235-I: Aerospace Systems & Control Theory</a>
+  
+              </td>
+            </tr>
           </tr>
           
         </tbody></table>
