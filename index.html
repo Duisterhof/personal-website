@@ -35,7 +35,7 @@
                   <strong>Email:</strong> bduister@cmu.edu
                 </p>
              <strong>Bio </strong> </p>
-             I am a Ph.D. student at Carnegie Mellon University (CMU), in the <a href="https://www.ri.cmu.edu/"> Robotics Institute</a> advised by <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>. 
+             I am a Ph.D. student at Carnegie Mellon University (CMU), in the <a href="https://www.ri.cmu.edu/"> Robotics Institute</a> advised by <a href="https://ichnow.ski/">Jeffrey Ichnowski</a> and frequently collaborate with <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a> and <a href="https://wenbowen123.github.io/">Bowen Wen</a>.
              I was previously a research intern in the DUSt3R Group at NAVER Labs Europe, advised by <a href="https://europe.naverlabs.com/people_user_naverlabs/j%C3%A9rome-revaud/">Jérome Revaud</a> and <a href="https://europe.naverlabs.com/people_user_naverlabs/vincent-leroy/">Vincent Leroy</a>.
              My interests lie at the intersection of perception and robot manipulation of challenging objects, such as (transparent) deformables. 
              I am a recipient of the 2023 <a href="https://www.cs.cmu.edu/cmlh/">CMLH Fellowship in Digital Health Innovation</a>, and the 2024 <a href="https://www.cs.cmu.edu/cmlh/2024-generative-ai-fellows">CMLH Fellowship in Generative AI in Healthcare</a>. 
@@ -53,6 +53,7 @@
               <p style="text-align:center">
                 <a href="https://scholar.google.com/citations?user=LLsYMFYAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
                 <a href="https://twitter.com/bduisterhof">Twitter</a> &nbsp/&nbsp
+                <a href="https://bsky.app/profile/bardienus.bsky.social">Bluesky</a> &nbsp/&nbsp
                 <a href="https://www.linkedin.com/in/duisterhof/">LinkedIn</a> &nbsp/&nbsp
                 <a href="https://github.com/duisterhof/">Github</a>
               
@@ -70,6 +71,14 @@
             <p>
               <!--bullet points with news-->
               <ul>
+                <li>
+                  [June, 2025] We are excited to release <a href="https://rayst3r.github.io/">RaySt3R</a>, a method for predicting novel depth maps for zero-shot object completion!
+                </p>
+                </li>
+                <li>
+                  [March, 2025] MASt3R-SfM has received the best student paper award at <a href="https://3dvconf.github.io/2025/">3DV 2025</a>! Thanks to all collaborators at <a href="https://europe.naverlabs.com/">Naver Labs Europe</a> 🧗
+                </p>
+                </li>
                 <li>
                   [December, 2024] MASt3R-SfM and DynOMo have been accepted at <a href="https://3dvconf.github.io/2025/">3DV 2025</a>!
                 </p>
@@ -117,6 +126,54 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr onmouseout="rayst3r_stop()" onmouseover="rayst3r_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='rayst3r-vid'><video  width=100% height=100% muted autoplay loop>
+                <source src="images/rayst3r.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+              </div>
+              <script type="text/javascript">
+                function rayst3r_start() {
+                  document.getElementById('rayst3r-vid').style.opacity = "1";
+                }
+
+                function rayst3r_stop() {
+                  document.getElementById('rayst3r-vid').style.opacity = "1";
+                }
+                rayst3r_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://deformgs.github.io">
+              <papertitle>RaySt3R: Predicting Novel Depth Maps for Zero-Shot Object Completion
+              </papertitle>
+              </a>
+              <br>
+              <strong>Bardienus P. Duisterhof</strong>,
+              <a href="https://www.ri.cmu.edu/ri-people/jan-oberst/">Jan Oberst</a>,
+              <a href="https://wenbowen123.github.io/">Bowen Wen</a>
+              <br>
+              <a href="https://research.nvidia.com/person/stan-birchfield">Stan Birchfield</a>,
+              <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>,
+              <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>
+              <br>
+							<em> arXiv 2025</em> 
+              <br>
+              <a href="https://rayst3r.github.io/">project website</a>
+              /
+              <a href="https://github.com/Duisterhof/rayst3r">code</a>
+              /
+              <a href="https://x.com/BDuisterhof/status/1930986607655649647">X thread</a>
+              <p></p>
+              <p>Imagine if robots could fill in the blanks in cluttered scenes.
+
+                 Enter <span style="color: orange;">RaySt3R</span>✨: a single masked RGB-D image in, complete 3D out.
+                It infers depth, object masks, and confidence for novel views, and merges the predictions into a single point cloud. </p>
+            </td>
+          </tr>
+
 
           <tr onmouseout="mast3r_sfm_stop()" onmouseover="mast3r_sfm_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
@@ -151,7 +208,7 @@
               <a href="https://europe.naverlabs.com/people_user_naverlabs/ycabon/">Yohann Cabon</a>,
               <a href="https://europe.naverlabs.com/people_user_naverlabs/jrevaud">Jérome Revaud</a>
               <br>
-							<em>International Conference on 3D Vision (3DV) 2025, <span style="color: orange;">Oral</span></em> 
+							<em>International Conference on 3D Vision (3DV) 2025, <span style="color: orange;">Best Student Paper Award</span></em> 
               <br
               <a href="https://arxiv.org/abs/2409.19152">arXiv</a>
               /
