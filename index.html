@@ -1,29 +1,46 @@
 <!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-  <title>Bardienus Pieter Duisterhof</title>
-  
-  <meta name="author" content="Bardienus Duisterhof">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <meta name="author" content="Bardienus Duisterhof">
+  <title>Bardienus Pieter Duisterhof</title>
+
   <link rel="icon" type="image/png" href="images/seal_icon.png">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <!-- SCENE: importmap -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
 
   <!-- Global site tag (gtag.js) - Google Analytics DO NOT COPY THIS -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75286303-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-75286303-1');
-</script>
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75286303-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-75286303-1');
+  </script>
 </head>
- 
+
 <body>
   <a id="top"></a>
-  <div class="bg-orbs"><span class="orb orb-a"></span><span class="orb orb-b"></span></div>
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+  </div>
+
   <header class="navbar">
     <div class="container nav-inner">
       <a href="#top" class="brand">
@@ -33,743 +50,887 @@
           <div class="brand-name">Bardienus Duisterhof</div>
         </div>
       </a>
-      <nav class="nav-links">
-        <a href="#news">News</a>
+      <button type="button" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <nav id="primary-nav" class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
         <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#news">News</a>
         <a href="#teaching">Teaching</a>
-        <a href="#media">Media</a>
         <a href="#awards">Awards</a>
-        <a href="data/CV.pdf" target="_blank" class="btn-outline">CV</a>
+        <a href="data/CV.pdf" target="_blank" rel="noopener" class="btn-outline">CV</a>
       </nav>
     </div>
   </header>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <a id="news"></a>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Bardienus Pieter Duisterhof</name>
-              </p>
-                <p style="text-align:center">
-                  <strong>Email:</strong> bduister@cmu.edu
-                </p>
-             <strong>Bio </strong> </p>
-             I am a Ph.D. student at Carnegie Mellon University (CMU), in the <a href="https://www.ri.cmu.edu/"> Robotics Institute</a> advised by <a href="https://ichnow.ski/">Jeffrey Ichnowski</a> and frequently collaborate with <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a> and <a href="https://wenbowen123.github.io/">Bowen Wen</a>.
-             I was previously a research intern in the DUSt3R Group at NAVER Labs Europe, advised by <a href="https://europe.naverlabs.com/people_user_naverlabs/j%C3%A9rome-revaud/">Jérome Revaud</a> and <a href="https://europe.naverlabs.com/people_user_naverlabs/vincent-leroy/">Vincent Leroy</a>.
-             My interests lie at the intersection of perception and robot manipulation of challenging objects, such as (transparent) deformables. 
-             I am a recipient of the 2023 <a href="https://www.cs.cmu.edu/cmlh/">CMLH Fellowship in Digital Health Innovation</a>, and the 2024 <a href="https://www.cs.cmu.edu/cmlh/2024-generative-ai-fellows">CMLH Fellowship in Generative AI in Healthcare</a>. 
-             
-             
-              </p>
-             During my first year at CMU I worked with <a href="https://www.ri.cmu.edu/ri-faculty/sebastian-scherer/"> Sebastian Scherer </a>, where we focused on geometric camera calibration.        
-             Prior to that I completed a Bachelor's and Master's degree in Aerospace Engineering at Delft University of Technology, in the Netherlands. Advised by <a href="http://www.bene-guido.eu/wordpress/">Guido de Croon</a>, I studied efficient bio-inspired algorithms for fully autonomous nano drones.
-             In 2019 I was a visiting student at <a href="https://edge.seas.harvard.edu/">Vijay Janapa Reddi's Edge Computing lab</a>, at Harvard University, where we studied Deep Reinforcement Learning for tiny robots.  
-            </p>
-             I am passionate about creating a future where complex robotic automation is scalable, safe, and beneficial. 
-            </p>
-            <strong>Students </strong> </p> I am always looking for collaborators, shoot me an email if you would like to work with me!
 
-              <p style="text-align:center">
-                <a href="https://scholar.google.com/citations?user=LLsYMFYAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://twitter.com/bduisterhof">Twitter</a> &nbsp/&nbsp
-                <a href="https://bsky.app/profile/bardienus.bsky.social">Bluesky</a> &nbsp/&nbsp
-                <a href="https://www.linkedin.com/in/duisterhof/">LinkedIn</a> &nbsp/&nbsp
-                <a href="https://github.com/duisterhof/">Github</a>
-              
-            </td>
-            <td style="padding:2.5%;width:25%;max-width:25%">
-              <a href="images/avatar.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/avatar.jpg" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </tbody></table>
+  <main>
+    <section id="hero" class="hero">
+      <div id="scene-root" class="scene-root" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h1 class="hero-name"><name>Bardienus Duisterhof</name></h1>
+        <p class="hero-tagline">
+          Robotics + 3D perception PhD at CMU. I build systems that help robots see and reason in 3D.
+        </p>
+        <div class="hero-cta">
+          <a class="btn-primary" href="data/CV.pdf" target="_blank" rel="noopener">CV <span class="arr">↗</span></a>
+          <a class="btn-outline" href="https://scholar.google.com/citations?user=LLsYMFYAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar <span class="arr">↗</span></a>
+          <a class="btn-outline" href="https://github.com/duisterhof/" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
+          <span class="email-reveal-wrap" aria-live="polite">
+            <button class="email-reveal btn-outline"
+                    type="button"
+                    data-user="bduister"
+                    data-domain="cmu.edu"
+                    aria-label="Reveal contact email">
+              <span class="email-icon" aria-hidden="true">✉</span> Reveal email
+            </button>
+          </span>
+        </div>
+      </div>
+      <a class="hero-scroll-cue" href="#about" aria-label="Scroll to about">
+        <span class="hero-scroll-arrow">↓</span>
+      </a>
+    </section>
 
-        <a id="research"></a>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-            <heading>News</heading>
-            <p>
-              <!--bullet points with news-->
-              <ul>
-                <li>
-                  [September, 2025] <a href="https://rayst3r.github.io/">RaySt3R</a> has been accepted at <a href="https://nips.cc/">NeurIPS 2025</a>! See you in San Diego  🌴
-                </p>
-                </li>
-                
-                
-                <li>
-                  [June, 2025] We are excited to release <a href="https://rayst3r.github.io/">RaySt3R</a>, a method for predicting novel depth maps for zero-shot object completion!
-                </p>
-                </li>
-                <li>
-                  [March, 2025] MASt3R-SfM has received the best student paper award at <a href="https://3dvconf.github.io/2025/">3DV 2025</a>! Thanks to all collaborators at <a href="https://europe.naverlabs.com/">Naver Labs Europe</a> 🧗
-                </p>
-                </li>
-                <li>
-                  [December, 2024] MASt3R-SfM and DynOMo have been accepted at <a href="https://3dvconf.github.io/2025/">3DV 2025</a>!
-                </p>
-                </li>
-                <li>
-                  [November, 2024]  Thanks to the <a href="https://www.cs.cmu.edu/cmlh/2024-generative-ai-fellows">CMLH Fellowship in Generative AI in Healthcare</a> for generously supporting my research!</a>
-                </p>
-                </li>
+    <section id="about" class="section section-about">
+      <div class="about-frieze" aria-hidden="true">
+        <span class="frieze-horizon"></span>
+        <svg class="boat boat-a" viewBox="0 0 24 28" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <polygon points="10,2 10,18 22,18" fill="currentColor"/>
+          <rect x="9.5" y="2" width="0.7" height="16" fill="currentColor"/>
+          <path d="M2,19 L22,19 L19,24 L5,24 Z" fill="currentColor"/>
+          <line x1="2" y1="26" x2="22" y2="26" stroke="currentColor" stroke-opacity="0.5" stroke-width="0.5"/>
+        </svg>
+        <svg class="boat boat-b" viewBox="0 0 18 22" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <polygon points="8,1 8,14 16,14" fill="currentColor"/>
+          <rect x="7.5" y="1" width="0.6" height="13" fill="currentColor"/>
+          <path d="M2,15 L16,15 L14,19 L4,19 Z" fill="currentColor"/>
+          <line x1="2" y1="20.5" x2="16" y2="20.5" stroke="currentColor" stroke-opacity="0.5" stroke-width="0.5"/>
+        </svg>
+      </div>
+      <div class="section-inner about-grid">
+        <div class="about-text reveal">
+          <heading>About</heading>
+          <p>
+            I am a Ph.D. student at Carnegie Mellon University (CMU)'s
+            <a href="https://www.ri.cmu.edu/">Robotics Institute</a>, advised
+            by <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>, and I
+            frequently collaborate with
+            <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a> and
+            <a href="https://wenbowen123.github.io/">Bowen Wen</a>. I was
+            recently a research intern in the DUSt3R Group at NAVER Labs
+            Europe, advised by
+            <a href="https://europe.naverlabs.com/people_user_naverlabs/j%C3%A9rome-revaud/">Jérome Revaud</a>
+            and
+            <a href="https://europe.naverlabs.com/people_user_naverlabs/vincent-leroy/">Vincent Leroy</a>.
+            My interests lie at the intersection of perception and robot
+            manipulation of challenging objects, such as transparent and
+            deformable items.
+          </p>
+          <p>
+            During my first year at CMU I worked with
+            <a href="https://www.ri.cmu.edu/ri-faculty/sebastian-scherer/">Sebastian Scherer</a>
+            on geometric camera calibration. Prior to CMU I completed a
+            Bachelor's and Master's degree in Aerospace Engineering at
+            Delft University of Technology, advised by
+            <a href="http://www.bene-guido.eu/wordpress/">Guido de Croon</a>,
+            studying efficient bio-inspired algorithms for fully autonomous
+            nano drones. In 2019 I was a visiting student at
+            <a href="https://edge.seas.harvard.edu/">Vijay Janapa Reddi's Edge Computing lab</a>
+            at Harvard University. I am a recipient of the 2023
+            <a href="https://www.cs.cmu.edu/cmlh/">CMLH Fellowship in Digital Health Innovation</a>
+            and the 2024
+            <a href="https://www.cs.cmu.edu/cmlh/2024-generative-ai-fellows">CMLH Fellowship in Generative AI in Healthcare</a>.
+          </p>
+          <p class="about-collab">
+            <strong>Always looking for collaborators</strong> — drop me an email.
+          </p>
+        </div>
+        <aside class="about-photo reveal">
+          <a href="images/avatar.jpg">
+            <img src="images/avatar.jpg" alt="Portrait of Bardienus Duisterhof">
+          </a>
+        </aside>
+      </div>
+    </section>
 
-                <li>
-                  [September, 2024] <a href="https://kth-rpl.github.io/cloth-splatting/">Cloth-Splatting</a> has been accepted at <a href="https://www.corl.org/">CoRL 2024</a>!
-                </p>
-                </li>
-                <li>
-                  [August, 2024] <a href="https://deformgs.github.io/">DeformGS</a> has been accepted at <a href="https://www.algorithmic-robotics.org/">WAFR 2024</a>!
-                </p>
-                </li>
-                <li>
-                  [July, 2024] I started my internship at NAVER Labs Europe! Excited to work with Jérome Revaud, Vincent Leroy and the rest of the DUSt3R team. 
-                </p>
-                </li>
-                
-                <li>                [January, 2024] 2 papers accepted at <a href="https://2024.ieee-icra.org/">ICRA 2024</a>! See you in Japan 🇯🇵. </p>
+    <section id="research" class="section section-research">
+      <div class="section-inner">
+        <heading>Selected Research</heading>
 
-                </li>
-                <li>                [November, 2023] Check out our recent work on  <a href="https://md-splatting.github.io">MD-Splatting</a>, a method for dense tracking and novel view synthesis of cloth 🧣. </p>
-                </li>
-                <li>                [July, 2023] Our paper on NeRFs for transparent objects has been accepted for a 🌟spotlight🌟 presentation at the  <a href="https://sites.google.com/view/iccv23trickyworkshop">ICCV23 - TRICKY Workshop</a>. </p>
-                </li>
-                <li>                [April, 2023] Thanks to the <a href="https://www.cs.cmu.edu/cmlh/">CMLH Fellowship in Digital Health Innovation</a> for generously supporting my research! </p>
-                </li>
-              </ul>
-            </p>
-          </td>
-        </tr>
-      </tbody></table>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Research</heading>
-              <p>
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr onmouseout="rayst3r_stop()" onmouseover="rayst3r_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='rayst3r-vid'><video  width=100% height=100% muted autoplay loop>
-                <source src="images/rayst3r.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video></div>
-              </div>
-              <script type="text/javascript">
-                function rayst3r_start() {
-                  document.getElementById('rayst3r-vid').style.opacity = "1";
-                }
-
-                function rayst3r_stop() {
-                  document.getElementById('rayst3r-vid').style.opacity = "1";
-                }
-                rayst3r_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://rayst3r.github.io">
-              <papertitle>RaySt3R: Predicting Novel Depth Maps for Zero-Shot Object Completion
-              </papertitle>
-              </a>
-              <br>
+        <article class="paper-card reveal">
+          <a class="paper-media" href="https://rayst3r.github.io/" target="_blank" rel="noopener" aria-label="RaySt3R project page">
+            <video muted autoplay loop playsinline preload="metadata">
+              <source src="images/rayst3r.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </a>
+          <div class="paper-text">
+            <a href="https://rayst3r.github.io/" target="_blank" rel="noopener">
+              <papertitle>RaySt3R: Predicting Novel Depth Maps for Zero-Shot Object Completion</papertitle>
+            </a>
+            <p class="paper-authors">
               <strong>Bardienus P. Duisterhof</strong>,
               <a href="https://www.ri.cmu.edu/ri-people/jan-oberst/">Jan Oberst</a>,
-              <a href="https://wenbowen123.github.io/">Bowen Wen</a>
-              <br>
+              <a href="https://wenbowen123.github.io/">Bowen Wen</a>,
               <a href="https://research.nvidia.com/person/stan-birchfield">Stan Birchfield</a>,
               <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>,
               <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>
-              <br>
-							<em> NeurIPS 2025</em> 
-              <br>
-              <a href="https://rayst3r.github.io/">project website</a>
-              /
-              <a href="https://github.com/Duisterhof/rayst3r">code</a>
-              /
-              <a href="https://x.com/BDuisterhof/status/1930986607655649647">X thread</a>
-              <p></p>
-              <p>Imagine if robots could fill in the blanks in cluttered scenes.
+            </p>
+            <p class="paper-venue"><em>NeurIPS 2025</em></p>
+            <p class="paper-summary">
+              Imagine if robots could fill in the blanks in cluttered scenes.
+              Enter <span class="highlight-amber">RaySt3R</span> ✨: a single masked RGB-D image in, complete 3D out.
+              It infers depth, object masks, and confidence for novel views, then merges the predictions into a single point cloud.
+            </p>
+            <p class="paper-links">
+              <a href="https://rayst3r.github.io/" target="_blank" rel="noopener">project</a>
+              <span class="sep">/</span>
+              <a href="https://github.com/Duisterhof/rayst3r" target="_blank" rel="noopener">code</a>
+              <span class="sep">/</span>
+              <a href="https://x.com/BDuisterhof/status/1930986607655649647" target="_blank" rel="noopener">X thread</a>
+            </p>
+          </div>
+        </article>
 
-                 Enter <span style="color: orange;">RaySt3R</span>✨: a single masked RGB-D image in, complete 3D out.
-                It infers depth, object masks, and confidence for novel views, and merges the predictions into a single point cloud. </p>
-            </td>
-          </tr>
-
-
-          <tr onmouseout="mast3r_sfm_stop()" onmouseover="mast3r_sfm_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='deformgs-vid'><video  width=100% height=100% muted autoplay loop>
-                Your browser does not support the video tag.
-                </video></div>
-              <img src="images/mast3r.png" width="160">
-              
-              </div>
-              <script type="text/javascript">
-                function mast3r_sfm_start() {
-                  document.getElementById('deformgs-vid').style.opacity = "1";
-                }
-
-                function mast3r_sfm_stop() {
-                  document.getElementById('deformgs-vid').style.opacity = "1";
-                }
-                mast3r_sfm_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://europe.naverlabs.com/research/publications/mast3r-sfm-a-fully-integrated-solution-for-unconstrained-structure-from-motion/">
-              <papertitle>MASt3R-SfM: a Fully-Integrated Solution for Unconstrained Structure-from-Motion
-              </papertitle>
-              </a>
-              <br>
+        <article class="paper-card reveal">
+          <a class="paper-media" href="https://europe.naverlabs.com/research/publications/mast3r-sfm-a-fully-integrated-solution-for-unconstrained-structure-from-motion/" target="_blank" rel="noopener" aria-label="MASt3R-SfM paper page">
+            <img src="images/mast3r.png" alt="MASt3R-SfM teaser">
+          </a>
+          <div class="paper-text">
+            <a href="https://europe.naverlabs.com/research/publications/mast3r-sfm-a-fully-integrated-solution-for-unconstrained-structure-from-motion/" target="_blank" rel="noopener">
+              <papertitle>MASt3R-SfM: a Fully-Integrated Solution for Unconstrained Structure-from-Motion</papertitle>
+            </a>
+            <p class="paper-authors">
               <strong>Bardienus P. Duisterhof*</strong>,
               <a href="https://www.vicos.si/people/lojze_zust/">Lojze Zust*</a>,
               <a href="https://europe.naverlabs.com/people_user_naverlabs/pweinzae/">Philippe Weinzaepfel</a>,
               <a href="https://europe.naverlabs.com/people_user_naverlabs/vleroy/">Vincent Leroy</a>,
               <a href="https://europe.naverlabs.com/people_user_naverlabs/ycabon/">Yohann Cabon</a>,
               <a href="https://europe.naverlabs.com/people_user_naverlabs/jrevaud">Jérome Revaud</a>
-              <br>
-							<em>International Conference on 3D Vision (3DV) 2025, <span style="color: orange;">Oral, Best Student Paper Award</span></em> 
-              <br>
-              <a href="https://arxiv.org/abs/2409.19152">arxiv</a>
-              /
-              <a href="https://github.com/naver/mast3r/tree/mast3r_sfm">code</a>
-              <p></p>
-              <p>MASt3R for SfM with 1000+ unordered images! We contribute a memory-efficient algorithm which leverages the MASt3R encoder for image retrieval without any overhead. 
-                MASt3R-SfM has an overall linear complexity in the number of images, and can handle any set of ordered or unordered images.   </p>
-            </td>
-          </tr>
+            </p>
+            <p class="paper-venue">
+              <em>International Conference on 3D Vision (3DV) 2025, <span class="highlight-amber">Oral, Best Student Paper Award</span></em>
+            </p>
+            <p class="paper-summary">
+              MASt3R for SfM with 1000+ unordered images. We contribute a memory-efficient algorithm that leverages the MASt3R encoder for image retrieval without any overhead.
+              MASt3R-SfM has overall linear complexity in the number of images, and handles any set of ordered or unordered images.
+            </p>
+            <p class="paper-links">
+              <a href="https://arxiv.org/abs/2409.19152" target="_blank" rel="noopener">arxiv</a>
+              <span class="sep">/</span>
+              <a href="https://github.com/naver/mast3r/tree/mast3r_sfm" target="_blank" rel="noopener">code</a>
+            </p>
+          </div>
+        </article>
 
-
-
-          <tr onmouseout="deformgs_stop()" onmouseover="deformgs_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='deformgs-vid'><video  width=100% height=100% muted autoplay loop>
-                <source src="images/deformgs.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video></div>
-              </div>
-              <script type="text/javascript">
-                function deformgs_start() {
-                  document.getElementById('deformgs-vid').style.opacity = "1";
-                }
-
-                function deformgs_stop() {
-                  document.getElementById('deformgs-vid').style.opacity = "1";
-                }
-                deformgs_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://deformgs.github.io">
-              <papertitle>DeformGS: Scene Flow in Highly Deformable Scenes for Deformable Object Manipulation
-              </papertitle>
-              </a>
-              <br>
+        <article class="paper-card reveal">
+          <a class="paper-media" href="https://deformgs.github.io" target="_blank" rel="noopener" aria-label="DeformGS project page">
+            <video muted autoplay loop playsinline preload="metadata">
+              <source src="images/deformgs.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </a>
+          <div class="paper-text">
+            <a href="https://deformgs.github.io" target="_blank" rel="noopener">
+              <papertitle>DeformGS: Scene Flow in Highly Deformable Scenes for Deformable Object Manipulation</papertitle>
+            </a>
+            <p class="paper-authors">
               <strong>Bardienus P. Duisterhof</strong>,
               <a href="https://mandizhao.github.io/">Zhao Mandi</a>,
               <a href="https://www.ri.cmu.edu/ri-people/yunchao-yao/">Yunchao Yao</a>,
               <a href="https://jia-wei-liu.github.io/">Jia-Wei Liu</a>,
               <a href="https://jennyseidenschwarz.github.io/">Jenny Seidenschwarz</a>,
               <a href="https://sites.google.com/view/showlab">Mike Zheng Shou</a>,
-              <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>
+              <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>,
               <a href="https://shurans.github.io/">Shuran Song</a>,
               <a href="https://research.nvidia.com/person/stan-birchfield">Stan Birchfield</a>,
               <a href="https://wenbowen123.github.io/">Bowen Wen</a>,
               <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>
-              <br>
-							<em> Proc. Algorithmic Foundations of Robotics (WAFR) 2024</em> 
-              <br>
-              <a href="https://md-splatting.github.io/">project website</a>
-              /
-              <a href="https://arxiv.org/abs/2312.00583">arXiv</a>
-              /
-              <a href="https://drive.google.com/drive/folders/116XTLBUvuiEQPjKXKZP8fYab3F3L1cCd?usp=sharing">data</a>
-              /
-              <a href="https://github.com/momentum-robotics-lab/md-splatting">code</a>
-              /
-              <a href="https://x.com/BDuisterhof/status/1829170197829431695">X thread</a>
-              <p></p>
-              <p>Deformable objects are common in household, industrial and healthcare settings. Tracking them would unlock many applications in robotics, gen-AI, and AR.
+            </p>
+            <p class="paper-venue"><em>Proc. Algorithmic Foundations of Robotics (WAFR) 2024</em></p>
+            <p class="paper-summary">
+              Deformable objects are common in household, industrial, and healthcare settings; tracking them would unlock applications across robotics, gen-AI, and AR.
+              DeformGS performs dense 3D tracking and dynamic novel-view synthesis on real-world deformable cloths.
+            </p>
+            <p class="paper-links">
+              <a href="https://md-splatting.github.io/" target="_blank" rel="noopener">project website</a>
+              <span class="sep">/</span>
+              <a href="https://arxiv.org/abs/2312.00583" target="_blank" rel="noopener">arXiv</a>
+              <span class="sep">/</span>
+              <a href="https://drive.google.com/drive/folders/116XTLBUvuiEQPjKXKZP8fYab3F3L1cCd?usp=sharing" target="_blank" rel="noopener">data</a>
+              <span class="sep">/</span>
+              <a href="https://github.com/momentum-robotics-lab/md-splatting" target="_blank" rel="noopener">code</a>
+              <span class="sep">/</span>
+              <a href="https://x.com/BDuisterhof/status/1829170197829431695" target="_blank" rel="noopener">X thread</a>
+            </p>
+          </div>
+        </article>
 
-                How? Check out DeformGS: a method for dense 3D tracking and dynamic novel view synthesis on deformable cloths in the real world.</p>
-            </td>
-          </tr>
-
-
-
-
-          <tr onmouseout="clothsplatting_stop()" onmouseover="clothsplatting_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='clothsplatting-vid'><video  width=100% height=100% muted autoplay loop>
-                <source src="images/clothsplatting.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video></div>
-              </div>
-              
-              
-              <script type="text/javascript">
-                function clothsplatting_start() {
-                  document.getElementById('clothsplatting-vid').style.opacity = "1";
-                }
-
-                function clothsplatting_stop() {
-                  document.getElementById('clothsplatting-vid').style.opacity = "1";
-                }
-                clothsplatting_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://kth-rpl.github.io/cloth-splatting/">
-              <papertitle>Cloth-Splatting: 3D State Estimation from RGB Supervision for Deformable Objects
-              </papertitle>
-              </a>
-              <br>
+        <article class="paper-card reveal">
+          <a class="paper-media" href="https://kth-rpl.github.io/cloth-splatting/" target="_blank" rel="noopener" aria-label="Cloth-Splatting project page">
+            <video muted autoplay loop playsinline preload="metadata">
+              <source src="images/clothsplatting.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </a>
+          <div class="paper-text">
+            <a href="https://kth-rpl.github.io/cloth-splatting/" target="_blank" rel="noopener">
+              <papertitle>Cloth-Splatting: 3D State Estimation from RGB Supervision for Deformable Objects</papertitle>
+            </a>
+            <p class="paper-authors">
               <a href="https://albilo17.github.io/">Alberta Longhini*</a>,
               <a href="https://buesma.github.io/">Marcel Büsching*</a>,
               <strong>Bardienus P. Duisterhof</strong>,
               <a href="http://jenslundell.ai/">Jens Lundell</a>,
               <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>,
-              <a href="https://www.kth.se/profile/celle">Mårten Björkman</a>
+              <a href="https://www.kth.se/profile/celle">Mårten Björkman</a>,
               <a href="https://www.kth.se/profile/dani">Danica Kragic</a>
+            </p>
+            <p class="paper-venue"><em>Conference on Robot Learning (CoRL) 2024</em></p>
+            <p class="paper-summary">
+              Cloth-Splatting accurately estimates the state of deformable objects from RGB supervision.
+              It uses a GNN as a prior to improve tracking accuracy and convergence speed.
+            </p>
+            <p class="paper-links">
+              <a href="https://kth-rpl.github.io/cloth-splatting/" target="_blank" rel="noopener">project website</a>
+              <span class="sep">/</span>
+              <a href="https://openreview.net/forum?id=WmWbswjTsi" target="_blank" rel="noopener">paper</a>
+            </p>
+          </div>
+        </article>
 
-              <br>
-							<em>Conference on Robot Learning (CoRL) 2024</em> 
-              <br>
-              <a href="https://kth-rpl.github.io/cloth-splatting/">project website</a>
-              /
-              <a href="https://openreview.net/forum?id=WmWbswjTsi">paper</a>
-              <p></p>
-              <p> We present Cloth-Splatting: a method for accurate state estimation of deformable objects from RGB supervision. 
-                Cloth-Splatting leverages a GNN as a prior to improve tracking accuracy and speed up convergence.</p>
-            </td>
-          </tr>
-
-
-          <tr onmouseout="dynomo_stop()" onmouseover="dynomo_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='dynomo-vid'><video  width=100% height=100% muted autoplay loop>
-                  Your browser does not support the video tag.
-                <source src='images/dynomo.mp4' width="160" type="video/mp4">
-              
-                </video></div>
-              </div>
-              
-              
-              <script type="text/javascript">
-                function dynomo_start() {
-                  document.getElementById('dynomo-vid').style.opacity = "1";
-                }
-
-                function dynomo_stop() {
-                  document.getElementById('dynomo-vid').style.opacity = "1";
-                }
-                dynomo_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://arxiv.org/abs/2409.02104">
-              <papertitle>DynOMo: Online Point Tracking by Dynamic Online Monocular Gaussian Reconstruction
-              </papertitle>
-              </a>
-              <br>
+        <article class="paper-card reveal">
+          <a class="paper-media" href="https://jennyseidenschwarz.github.io/DynOMo.github.io/" target="_blank" rel="noopener" aria-label="DynOMo project page">
+            <video muted autoplay loop playsinline preload="metadata">
+              <source src="images/dynomo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </a>
+          <div class="paper-text">
+            <a href="https://arxiv.org/abs/2409.02104" target="_blank" rel="noopener">
+              <papertitle>DynOMo: Online Point Tracking by Dynamic Online Monocular Gaussian Reconstruction</papertitle>
+            </a>
+            <p class="paper-authors">
               <a href="https://jennyseidenschwarz.github.io/">Jenny Seidenschwarz</a>,
               <a href="https://dvl.in.tum.de/team/zhouq/">Qunjie Zhou</a>,
               <strong>Bardienus P. Duisterhof</strong>,
-              <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>
+              <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>,
               <a href="https://dvl.in.tum.de/team/lealtaixe/">Laura Leal-Taixé</a>
+            </p>
+            <p class="paper-venue"><em>International Conference on 3D Vision (3DV) 2025</em></p>
+            <p class="paper-summary">
+              Online 3D tracking can unlock many new applications in robotics, AR, and VR. Most prior work targets offline tracking on full sequences.
+              DynOMo simultaneously performs 3D tracking, 3D reconstruction, novel-view synthesis, and pose estimation.
+            </p>
+            <p class="paper-links">
+              <a href="https://arxiv.org/abs/2409.02104" target="_blank" rel="noopener">arXiv</a>
+              <span class="sep">/</span>
+              <a href="https://jennyseidenschwarz.github.io/DynOMo.github.io/" target="_blank" rel="noopener">project website</a>
+            </p>
+          </div>
+        </article>
 
-              <br>
-							<em>International Conference on 3D Vision (3DV) 2025</em> 
-              <br>
-              <a href="https://arxiv.org/abs/2409.02104">arXiv /</a>
-              <a href="https://jennyseidenschwarz.github.io/DynOMo.github.io/">project website</a>
-
-              <p></p>
-              <p> Online 3D tracking can unlock many new applications in robotics, AR and VR. Most prior works have focused on offline tracking, requiring an entire sequence of posed images. 
-                Here we present DynOMo, a method for simultaneous 3D tracking, 3D reconstruction, novel view synthesis and pose estimation!</p>
-            </td>
-          </tr>
-
-          <tr onmouseout="residualnerf_stop()" onmouseover="residualnerf_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='residualnerf_image'><video  width=100% height=100% muted autoplay loop>
-                Your browser does not support the video tag.
-                <source src="images/residual_nerf.mp4" type="video/mp4"> 
-                </video></div>
-                
-              </div>
-              <script type="text/javascript">
-                function residualnerf_start() {
-                  document.getElementById('residualnerf_image').style.opacity = "1";
-                }
-
-                function residualnerf_stop() {
-                  document.getElementById('residualnerf_image').style.opacity = "1";
-                }
-                residualnerf_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://residual-nerf.github.io/">
-              <papertitle>Residual-NeRF: Learning Residual NeRFs for Transparent Object Manipulation
-              </papertitle>
-              </a>
-              <br>
+        <article class="paper-card reveal">
+          <a class="paper-media" href="https://residual-nerf.github.io/" target="_blank" rel="noopener" aria-label="Residual-NeRF project page">
+            <video muted autoplay loop playsinline preload="metadata">
+              <source src="images/residual_nerf.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </a>
+          <div class="paper-text">
+            <a href="https://residual-nerf.github.io/" target="_blank" rel="noopener">
+              <papertitle>Residual-NeRF: Learning Residual NeRFs for Transparent Object Manipulation</papertitle>
+            </a>
+            <p class="paper-authors">
               <strong>Bardienus P. Duisterhof</strong>,
               <a href="https://yueminm.github.io/">Yuemin Mao</a>,
               <a href="https://www.ri.cmu.edu/ri-people/si-heng-teng/">Si Heng Teng</a>,
               <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>
-              <br>
-							<em>IEEE International Conference on Robotics and Automation (ICRA) 2024</em> <br> 
-              <em>🌟Spotlight🌟 presentation at the  <a href="https://sites.google.com/view/iccv23trickyworkshop">ICCV23 - TRICKY Workshop</em>
-              <br>
-              <a href="https://residual-nerf.github.io/">project website</a>
-              /
-              <a href="https://arxiv.org/abs/2405.06181">arXiv</a>
-              /
-              <a href="https://www.youtube.com/watch?v=oA2CkRFI61c">video</a>
-              /
-              <a href="https://github.com/momentum-robotics-lab/residual-nerf">code</a>
-              <p></p>
-              <p>In this work, we propose Residual-NeRF, a method to improve depth perception and training speed for transparent objects. Robots often operate in the same area, such as a kitchen. 
-                By first learning a background NeRF of the scene without transparent objects to be manipulated, we improve depth perception quality and speed up training. 
-              </p>
-            </td>
-          </tr>
+            </p>
+            <p class="paper-venue">
+              <em>IEEE International Conference on Robotics and Automation (ICRA) 2024</em><br>
+              <em>🌟 Spotlight 🌟 presentation at the <a href="https://sites.google.com/view/iccv23trickyworkshop">ICCV23 — TRICKY Workshop</a></em>
+            </p>
+            <p class="paper-summary">
+              Residual-NeRF improves depth perception and training speed for transparent objects. By first learning a background NeRF of the workspace without the transparent objects to be manipulated, we recover better depth quality and faster convergence.
+            </p>
+            <p class="paper-links">
+              <a href="https://residual-nerf.github.io/" target="_blank" rel="noopener">project website</a>
+              <span class="sep">/</span>
+              <a href="https://arxiv.org/abs/2405.06181" target="_blank" rel="noopener">arXiv</a>
+              <span class="sep">/</span>
+              <a href="https://www.youtube.com/watch?v=oA2CkRFI61c" target="_blank" rel="noopener">video</a>
+              <span class="sep">/</span>
+              <a href="https://github.com/momentum-robotics-lab/residual-nerf" target="_blank" rel="noopener">code</a>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-          <tr onmouseout="gslbench_stop()" onmouseover="gslbench_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='gslbench_image'><video  width=100% height=100% muted autoplay loop>
-                Your browser does not support the video tag.
-                <source src="images/gslbench.mp4" type="video/mp4"> 
-                </video></div>
-                
-              </div>
-              <script type="text/javascript">
-                function gslbench_start() {
-                  document.getElementById('gslbench_image').style.opacity = "1";
-                }
+    <section id="publications" class="section section-publications">
+      <div class="section-inner">
+        <heading>All Publications</heading>
+        <p class="section-blurb">The complete bibliography. The selected works above are repeated here in compact form.</p>
 
-                function gslbench_stop() {
-                  document.getElementById('gslbench_image').style.opacity = "1";
-                }
-                gslbench_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://sites.google.com/view/gslbench/home">
-              <papertitle>GSL-Bench: High Fidelity Gas Source Localisation Benchmarking
-              </papertitle>
+        <ul class="pub-list">
+          <li class="pub-item reveal">
+            <a class="pub-thumb" href="https://rayst3r.github.io/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <video muted autoplay loop playsinline preload="metadata">
+                <source src="images/rayst3r.mp4" type="video/mp4">
+              </video>
+            </a>
+            <div class="pub-body">
+              <a href="https://rayst3r.github.io/" target="_blank" rel="noopener">
+                <papertitle>RaySt3R: Predicting Novel Depth Maps for Zero-Shot Object Completion</papertitle>
               </a>
-              <br>
-              Hajo H. Erwich,
-              <strong>Bardienus P. Duisterhof</strong>,
-              <a href="http://www.bene-guido.eu/wordpress/">Guido de Croon</a>
-              <br>
-							<em>IEEE International Conference on Robotics and Automation (ICRA) 2024</em> 
-              <br>
-              <a href="https://sites.google.com/view/gslbench/home">project website</a>
-              /
-              <a href="https://ieeexplore.ieee.org/document/10610755">paper</a>
-              /
-              <a href="https://www.youtube.com/watch?v=kZa48WXf_1w">video</a>
-              /
-              <a href="https://github.com/Herwich012/GSL-Bench">code</a>
-              <p></p>
-              <p>Gas-source localization is an important task for autonomous robots. We present GSL-Bench, the first standardized benchmark for gas-source localization. 
-              GSL-Bench uses NVIDIA Isaac Sim for high visual fidelity, and OpenFOAM for realistic gas simulations. 
-              </p>
-            </td>
-          </tr>
-
-
-
-          <tr onmouseout="tartancalib_stop()" onmouseover="tartancalib_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='tartan_image'><video  width=100% height=100% muted autoplay loop>
-                Your browser does not support the video tag.
-                <source src="images/tartancalib.mp4" type="video/mp4"> 
-                </video></div>
-                
-              </div>
-              <script type="text/javascript">
-                function tartancalib_start() {
-                  document.getElementById('tartan_image').style.opacity = "1";
-                }
-
-                function tartancalib_stop() {
-                  document.getElementById('tartan_image').style.opacity = "1";
-                }
-                tartancalib_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://tartancalib.com">
-              <papertitle>TartanCalib: Iterative Wide-Angle Lens Calibration using Adaptive SubPixel Refinement of AprilTags
-              </papertitle>
-              </a>
-              <br>
-              <strong>Bardienus P. Duisterhof</strong>,
-              <a href="http://www.huyaoyu.com/">Yaoyu Hu</a>,
-              <a href="https://www.ri.cmu.edu/ri-people/si-heng-teng/">Si Heng Teng</a>,
-              <a href="https://www.cs.cmu.edu/~kaess/">Michael Kaess</a>,
-              <a href="https://www.ri.cmu.edu/ri-faculty/sebastian-scherer/">Sebastian Scherer</a>
-              <a href="https://tartancalib.com">project website</a>
-              /
-              <a href="https://arxiv.org/abs/2210.02511">arXiv</a>
-              /
-              <a href="https://www.youtube.com/watch?v=8WCCS-Ag_Co">video</a>
-              /
-              <a href="https://github.com/castacks/tartancalib">code</a>
-              <p></p>
-              <p>In this work we present our methodology for accurate wide-angle calibration. Our pipeline generates an intermediate model, and leverages it to iteratively improve feature detection and eventually the camera parameters. </p>
-            </td>
-          </tr>
-
-          <tr onmouseout="sniffy_stop()" onmouseover="sniffy_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='sniffy_image'><video  width=100% height=100% muted autoplay loop>
-                <source src="images/sniffy_square.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video></div>
-                <img src='images/sniffy.png' width="160">
-              </div>
-              <script type="text/javascript">
-                function sniffy_start() {
-                  document.getElementById('sniffy_image').style.opacity = "1";
-                }
-
-                function sniffy_stop() {
-                  document.getElementById('sniffy_image').style.opacity = "1";
-                }
-                sniffy_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://arxiv.org/abs/2107.05490">
-              <papertitle>Sniffy Bug: A Fully Autonomous Swarm of Gas-Seeking Nano Quadcopters in Cluttered Environments</papertitle>
-              </a>
-              <br>
-              <strong>Bardienus P. Duisterhof</strong>,
-              <a href="https://shushuai3.github.io/">Shushuai Li</a>,
-              <a href="https://www.javierburgues.com/">Javier Burgués</a>,
-              <a href="https://scholar.harvard.edu/vijay-janapa-reddi/home">Vijay Janapa Reddi</a>,
-              <a href="http://www.bene-guido.eu/wordpress/">Guido C.H.E. de Croon</a>
-              <br>
-							<em>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2021</em>
-              <br>
-      
-              <a href="https://arxiv.org/abs/2107.05490">arXiv</a>
-              /
-              <a href="https://www.youtube.com/watch?v=hj_SBSpK5qg">video</a>
-              /
-              <a href="https://github.com/tudelft/sniffy-bug">code</a>
-              <p></p>
-              <p>We have developed a swarm of autonomous, tiny drones that is able to localize gas sources in unknown, cluttered environments. Bio-inspired AI allows the drones to tackle this complex task without any external infrastructure.</p>
-            </td>
-
-
-            </tr>
-
-          <tr onmouseout="tinyrl_stop()" onmouseover="tinyrl_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='tinyrl_image'><video  width=100% height=100% muted autoplay loop>
-                <source src="images/tinyrl.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video></div>
-                <img src='images/tinyrl.jpg' width="160">
-              </div>
-              <script type="text/javascript">
-                function tinyrl_start() {
-                  document.getElementById('tinyrl_image').style.opacity = "1";
-                }
-
-                function tinyrl_stop() {
-                  document.getElementById('tinyrl_image').style.opacity = "1";
-                }
-                tinyrl_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://storage.googleapis.com/pub-tools-public-publication-data/pdf/9d61bdd2dc56c22a5d93cb78f07a70ebe3521052.pdf">
-              <papertitle>Tiny Robot Learning (tinyRL) for Source Seeking
-                on a Nano Quadcopter</papertitle>
-              </a>
-              <br>
-              <strong>Bardienus P. Duisterhof</strong>,
-              <a href="https://scholar.harvard.edu/srivatsan-krishnan">Srivatsan Krishnan</a>,
-              Jonathan J. Cruz, 
-              <a href="https://www.colbybanbury.com/">Colby R. Banbury</a>,
-              William Fu, 
-              <a href="https://www.afaust.info/">Aleksandra Faust</a>,
-              <a href="http://www.bene-guido.eu/wordpress/">Guido C.H.E. de Croon</a>,
-              <a href="https://scholar.harvard.edu/vijay-janapa-reddi/home">Vijay Janapa Reddi</a>
-              <br>
-							<em>IEEE International Conference on Robotics and Automation (ICRA) 2021</em> 
-              <br>
-      
-              <a href="https://storage.googleapis.com/pub-tools-public-publication-data/pdf/9d61bdd2dc56c22a5d93cb78f07a70ebe3521052.pdf">paper</a>
-              /
-              <a href="https://www.youtube.com/watch?v=wmVKbX7MOnU">video</a>
-              /
-              <a href="https://github.com/harvard-edge/source-seeking">code</a>
-              <p></p>
-              <p>We present fully autonomous source seeking onboard a highly constrained nano quadcopter, by contributing application-specific system and observation feature design to enable inference of a deep-RL policy onboard a nano quadcopter. </p>
-            </td>
-
-
-            </tr>
-
-            <tr onmouseout="delfly_stop()" onmouseover="delfly_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <div class="two" id='delfly_image'><video  width=100% height=100% muted autoplay loop>
-                  <source src="images/delfly.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                  </video></div>
-                  <img src='images/delfly.jpg' width="160">
-                </div>
-                <script type="text/javascript">
-                  function delfly_start() {
-                    document.getElementById('delfly_image').style.opacity = "1";
-                  }
-  
-                  function delfly_stop() {
-                    document.getElementById('delfly_image').style.opacity = "1";
-                  }
-                  delfly_stop()
-                </script>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="https://www.worldscientific.com/doi/10.1142/S2301385020500235">
-                <papertitle>A Tailless Flapping Wing MAV Performing Monocular Visual Servoing Tasks  </papertitle>
-                </a>
-                <br>
-                Diana A. Olejnik, 
+              <p class="pub-authors">
                 <strong>Bardienus P. Duisterhof</strong>,
-                <a href="https://www.matejkarasek.eu/wp/">Matej Karásek </a>, 
-                Kirk Y. W. Scheper, 
-                Tom van Dijk,
-                <a href="http://www.bene-guido.eu/wordpress/"> Guido C.H.E. de Croon</a>
-                <br>
-                <em>Unmanned Systems, Vol. 08, No. 04, pp. 287-294 </em>, 2020 
-                <br>
-        
-                <a href="https://www.worldscientific.com/doi/10.1142/S2301385020500235">paper</a>
-                /
-                <a href="https://www.youtube.com/watch?v=GoZ1WmADGbk">video</a>
-                <p></p>
-                <p>This paper describes the computer vision and control algorithms used to achieve autonomous flight with the ∼30g tailless flapping wing robot, used to participate in the International Micro Air Vehicle Conference and Competition (IMAV 2018) indoor microair vehicle competition. </p>
-              </td>
-  
-  
-              </tr>
-
-
-
-        </tbody></table>
-
-        <a id="teaching"></a>
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <tr>
-            <td>
-              <heading>Teaching</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-          <tr>
-            <td width="75%" valign="center">
-              <a href=" https://16820advancedcv.github.io/">16-820 at CMU: Advanced Computer Vision</a>
-
-            </td>
-          </tr>
-          <tr>
-            <td width="75%" valign="center">
-              <a href="https://sites.google.com/andrew.cmu.edu/16-720-spring-2024/home">16-720 at CMU: Introduction to Computer Vision</a>
-
-            </td>
-            <tr>
-              <td width="75%" valign="center">
-                <a href="https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=38992">AE2235-I: Aerospace Systems & Control Theory</a>
-  
-              </td>
-            </tr>
-          </tr>
-          
-        </tbody></table>
-
-        <a id="media"></a>
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <tr>
-            <td>
-              <heading>Media Coverage</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-          <tr>
-            <td width="75%" valign="center">
-              <a href="https://www.forbes.com/sites/davidhambling/2021/07/15/watch-this-autonomous-microdrone-swarm-sniff-out-a-gas-leak/">Forbes</a> <br>
-              <a href="https://spectrum.ieee.org/video-friday-fluidic-fingers">IEEE Spectrum Video Friday</a> <br>
-              <a href="https://robohub.org/sniffy-bug-a-fully-autonomous-swarm-of-gas-seeking-nano-quadcopters-in-cluttered-environments/">Robohub</a> <br>
-              <a href="https://www.bitcraze.io/author/bart/">Bitcraze Blog</a> <br>
-              <a href="https://www.youtube.com/watch?v=BJhYaLf_n8g"> PiXL Drone Show</a>
-
-            </td>
-          </tr>
-          
-        </tbody></table>
-        <a id="awards"></a>
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <tr>
-            <td>
-              <heading>Awards</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-          <tr>
-            <td width="75%" valign="center">
-              <a href="https://europe.naverlabs.com/research/publications/mast3r-sfm-a-fully-integrated-solution-for-unconstrained-structure-from-motion/">MASt3R-SfM Best Student Paper Award, 3DV 2025</a> <br>
-              <a href="https://www.tudelft.nl/en/stories/articles/stronger-together-swarm-mini-drones-sniff-out-gas-leaks">Best Graduate in Engineering, TU Delft, academic year 2020-2021</a> <br>
-              <a href="https://www.tudelft.nl/en/stories/articles/stronger-together-swarm-mini-drones-sniff-out-gas-leaks">Best Graduate in Aerospace Engineering, TU Delft, academic year 2020-2021</a> <br>
-              <a href="https://www.youtube.com/watch?v=GoZ1WmADGbk">Innovation Award, IMAV 2018 Autonomous Drone Race</a> <br>           
-
-            </td>
-          </tr>
-          
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:right;font-size:small;">
-                Modified version of template from <a href="https://github.com/jonbarron/jonbarron_website"> here</a>, and vibe-coded with Cursor.
+                <a href="https://www.ri.cmu.edu/ri-people/jan-oberst/">Jan Oberst</a>,
+                <a href="https://wenbowen123.github.io/">Bowen Wen</a>,
+                <a href="https://research.nvidia.com/person/stan-birchfield">Stan Birchfield</a>,
+                <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>,
+                <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>
               </p>
-            </td>
-          </tr>
-        </tbody></table>
-      </td>
-    </tr>
-  </table>
-</body>
+              <p class="pub-meta">
+                <span class="venue-chip">NeurIPS 2025</span>
+                <span class="pub-links">
+                  <a href="https://rayst3r.github.io/" target="_blank" rel="noopener">project</a>
+                  <span class="sep">/</span>
+                  <a href="https://github.com/Duisterhof/rayst3r" target="_blank" rel="noopener">code</a>
+                  <span class="sep">/</span>
+                  <a href="https://x.com/BDuisterhof/status/1930986607655649647" target="_blank" rel="noopener">X thread</a>
+                </span>
+              </p>
+            </div>
+          </li>
 
+          <li class="pub-item reveal">
+            <a class="pub-thumb" href="https://europe.naverlabs.com/research/publications/mast3r-sfm-a-fully-integrated-solution-for-unconstrained-structure-from-motion/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <img src="images/mast3r.png" alt="">
+            </a>
+            <div class="pub-body">
+              <a href="https://europe.naverlabs.com/research/publications/mast3r-sfm-a-fully-integrated-solution-for-unconstrained-structure-from-motion/" target="_blank" rel="noopener">
+                <papertitle>MASt3R-SfM: a Fully-Integrated Solution for Unconstrained Structure-from-Motion</papertitle>
+              </a>
+              <p class="pub-authors">
+                <strong>Bardienus P. Duisterhof*</strong>,
+                <a href="https://www.vicos.si/people/lojze_zust/">Lojze Zust*</a>,
+                <a href="https://europe.naverlabs.com/people_user_naverlabs/pweinzae/">Philippe Weinzaepfel</a>,
+                <a href="https://europe.naverlabs.com/people_user_naverlabs/vleroy/">Vincent Leroy</a>,
+                <a href="https://europe.naverlabs.com/people_user_naverlabs/ycabon/">Yohann Cabon</a>,
+                <a href="https://europe.naverlabs.com/people_user_naverlabs/jrevaud">Jérome Revaud</a>
+              </p>
+              <p class="pub-meta">
+                <span class="venue-chip">3DV 2025 · <span class="highlight-amber">Best Student Paper</span></span>
+                <span class="pub-links">
+                  <a href="https://arxiv.org/abs/2409.19152" target="_blank" rel="noopener">arxiv</a>
+                  <span class="sep">/</span>
+                  <a href="https://github.com/naver/mast3r/tree/mast3r_sfm" target="_blank" rel="noopener">code</a>
+                </span>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item reveal">
+            <a class="pub-thumb" href="https://deformgs.github.io" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <video muted autoplay loop playsinline preload="metadata">
+                <source src="images/deformgs.mp4" type="video/mp4">
+              </video>
+            </a>
+            <div class="pub-body">
+              <a href="https://deformgs.github.io" target="_blank" rel="noopener">
+                <papertitle>DeformGS: Scene Flow in Highly Deformable Scenes for Deformable Object Manipulation</papertitle>
+              </a>
+              <p class="pub-authors">
+                <strong>Bardienus P. Duisterhof</strong>,
+                <a href="https://mandizhao.github.io/">Zhao Mandi</a>,
+                <a href="https://www.ri.cmu.edu/ri-people/yunchao-yao/">Yunchao Yao</a>,
+                <a href="https://jia-wei-liu.github.io/">Jia-Wei Liu</a>,
+                <a href="https://jennyseidenschwarz.github.io/">Jenny Seidenschwarz</a>,
+                <a href="https://sites.google.com/view/showlab">Mike Zheng Shou</a>,
+                <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>,
+                <a href="https://shurans.github.io/">Shuran Song</a>,
+                <a href="https://research.nvidia.com/person/stan-birchfield">Stan Birchfield</a>,
+                <a href="https://wenbowen123.github.io/">Bowen Wen</a>,
+                <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>
+              </p>
+              <p class="pub-meta">
+                <span class="venue-chip">WAFR 2024</span>
+                <span class="pub-links">
+                  <a href="https://md-splatting.github.io/" target="_blank" rel="noopener">project</a>
+                  <span class="sep">/</span>
+                  <a href="https://arxiv.org/abs/2312.00583" target="_blank" rel="noopener">arXiv</a>
+                  <span class="sep">/</span>
+                  <a href="https://drive.google.com/drive/folders/116XTLBUvuiEQPjKXKZP8fYab3F3L1cCd?usp=sharing" target="_blank" rel="noopener">data</a>
+                  <span class="sep">/</span>
+                  <a href="https://github.com/momentum-robotics-lab/md-splatting" target="_blank" rel="noopener">code</a>
+                  <span class="sep">/</span>
+                  <a href="https://x.com/BDuisterhof/status/1829170197829431695" target="_blank" rel="noopener">X thread</a>
+                </span>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item reveal">
+            <a class="pub-thumb" href="https://kth-rpl.github.io/cloth-splatting/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <video muted autoplay loop playsinline preload="metadata">
+                <source src="images/clothsplatting.mp4" type="video/mp4">
+              </video>
+            </a>
+            <div class="pub-body">
+              <a href="https://kth-rpl.github.io/cloth-splatting/" target="_blank" rel="noopener">
+                <papertitle>Cloth-Splatting: 3D State Estimation from RGB Supervision for Deformable Objects</papertitle>
+              </a>
+              <p class="pub-authors">
+                <a href="https://albilo17.github.io/">Alberta Longhini*</a>,
+                <a href="https://buesma.github.io/">Marcel Büsching*</a>,
+                <strong>Bardienus P. Duisterhof</strong>,
+                <a href="http://jenslundell.ai/">Jens Lundell</a>,
+                <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>,
+                <a href="https://www.kth.se/profile/celle">Mårten Björkman</a>,
+                <a href="https://www.kth.se/profile/dani">Danica Kragic</a>
+              </p>
+              <p class="pub-meta">
+                <span class="venue-chip">CoRL 2024</span>
+                <span class="pub-links">
+                  <a href="https://kth-rpl.github.io/cloth-splatting/" target="_blank" rel="noopener">project</a>
+                  <span class="sep">/</span>
+                  <a href="https://openreview.net/forum?id=WmWbswjTsi" target="_blank" rel="noopener">paper</a>
+                </span>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item reveal">
+            <a class="pub-thumb" href="https://jennyseidenschwarz.github.io/DynOMo.github.io/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <video muted autoplay loop playsinline preload="metadata">
+                <source src="images/dynomo.mp4" type="video/mp4">
+              </video>
+            </a>
+            <div class="pub-body">
+              <a href="https://arxiv.org/abs/2409.02104" target="_blank" rel="noopener">
+                <papertitle>DynOMo: Online Point Tracking by Dynamic Online Monocular Gaussian Reconstruction</papertitle>
+              </a>
+              <p class="pub-authors">
+                <a href="https://jennyseidenschwarz.github.io/">Jenny Seidenschwarz</a>,
+                <a href="https://dvl.in.tum.de/team/zhouq/">Qunjie Zhou</a>,
+                <strong>Bardienus P. Duisterhof</strong>,
+                <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>,
+                <a href="https://dvl.in.tum.de/team/lealtaixe/">Laura Leal-Taixé</a>
+              </p>
+              <p class="pub-meta">
+                <span class="venue-chip">3DV 2025</span>
+                <span class="pub-links">
+                  <a href="https://arxiv.org/abs/2409.02104" target="_blank" rel="noopener">arXiv</a>
+                  <span class="sep">/</span>
+                  <a href="https://jennyseidenschwarz.github.io/DynOMo.github.io/" target="_blank" rel="noopener">project</a>
+                </span>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item reveal">
+            <a class="pub-thumb" href="https://residual-nerf.github.io/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <video muted autoplay loop playsinline preload="metadata">
+                <source src="images/residual_nerf.mp4" type="video/mp4">
+              </video>
+            </a>
+            <div class="pub-body">
+              <a href="https://residual-nerf.github.io/" target="_blank" rel="noopener">
+                <papertitle>Residual-NeRF: Learning Residual NeRFs for Transparent Object Manipulation</papertitle>
+              </a>
+              <p class="pub-authors">
+                <strong>Bardienus P. Duisterhof</strong>,
+                <a href="https://yueminm.github.io/">Yuemin Mao</a>,
+                <a href="https://www.ri.cmu.edu/ri-people/si-heng-teng/">Si Heng Teng</a>,
+                <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>
+              </p>
+              <p class="pub-meta">
+                <span class="venue-chip">ICRA 2024 · <span class="highlight-amber">ICCV23 TRICKY Spotlight</span></span>
+                <span class="pub-links">
+                  <a href="https://residual-nerf.github.io/" target="_blank" rel="noopener">project</a>
+                  <span class="sep">/</span>
+                  <a href="https://arxiv.org/abs/2405.06181" target="_blank" rel="noopener">arXiv</a>
+                  <span class="sep">/</span>
+                  <a href="https://www.youtube.com/watch?v=oA2CkRFI61c" target="_blank" rel="noopener">video</a>
+                  <span class="sep">/</span>
+                  <a href="https://github.com/momentum-robotics-lab/residual-nerf" target="_blank" rel="noopener">code</a>
+                </span>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item reveal">
+            <a class="pub-thumb" href="https://sites.google.com/view/gslbench/home" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <video muted autoplay loop playsinline preload="metadata">
+                <source src="images/gslbench.mp4" type="video/mp4">
+              </video>
+            </a>
+            <div class="pub-body">
+              <a href="https://sites.google.com/view/gslbench/home" target="_blank" rel="noopener">
+                <papertitle>GSL-Bench: High Fidelity Gas Source Localisation Benchmarking</papertitle>
+              </a>
+              <p class="pub-authors">
+                Hajo H. Erwich,
+                <strong>Bardienus P. Duisterhof</strong>,
+                <a href="http://www.bene-guido.eu/wordpress/">Guido de Croon</a>
+              </p>
+              <p class="pub-meta">
+                <span class="venue-chip">ICRA 2024</span>
+                <span class="pub-links">
+                  <a href="https://sites.google.com/view/gslbench/home" target="_blank" rel="noopener">project</a>
+                  <span class="sep">/</span>
+                  <a href="https://ieeexplore.ieee.org/document/10610755" target="_blank" rel="noopener">paper</a>
+                  <span class="sep">/</span>
+                  <a href="https://www.youtube.com/watch?v=kZa48WXf_1w" target="_blank" rel="noopener">video</a>
+                  <span class="sep">/</span>
+                  <a href="https://github.com/Herwich012/GSL-Bench" target="_blank" rel="noopener">code</a>
+                </span>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item reveal">
+            <a class="pub-thumb" href="https://tartancalib.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <video muted autoplay loop playsinline preload="metadata">
+                <source src="images/tartancalib.mp4" type="video/mp4">
+              </video>
+            </a>
+            <div class="pub-body">
+              <a href="https://tartancalib.com" target="_blank" rel="noopener">
+                <papertitle>TartanCalib: Iterative Wide-Angle Lens Calibration using Adaptive SubPixel Refinement of AprilTags</papertitle>
+              </a>
+              <p class="pub-authors">
+                <strong>Bardienus P. Duisterhof</strong>,
+                <a href="http://www.huyaoyu.com/">Yaoyu Hu</a>,
+                <a href="https://www.ri.cmu.edu/ri-people/si-heng-teng/">Si Heng Teng</a>,
+                <a href="https://www.cs.cmu.edu/~kaess/">Michael Kaess</a>,
+                <a href="https://www.ri.cmu.edu/ri-faculty/sebastian-scherer/">Sebastian Scherer</a>
+              </p>
+              <p class="pub-meta">
+                <span class="venue-chip">arXiv</span>
+                <span class="pub-links">
+                  <a href="https://tartancalib.com" target="_blank" rel="noopener">project</a>
+                  <span class="sep">/</span>
+                  <a href="https://arxiv.org/abs/2210.02511" target="_blank" rel="noopener">arXiv</a>
+                  <span class="sep">/</span>
+                  <a href="https://www.youtube.com/watch?v=8WCCS-Ag_Co" target="_blank" rel="noopener">video</a>
+                  <span class="sep">/</span>
+                  <a href="https://github.com/castacks/tartancalib" target="_blank" rel="noopener">code</a>
+                </span>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item reveal">
+            <a class="pub-thumb" href="https://arxiv.org/abs/2107.05490" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <video muted autoplay loop playsinline preload="metadata">
+                <source src="images/sniffy_square.mp4" type="video/mp4">
+              </video>
+            </a>
+            <div class="pub-body">
+              <a href="https://arxiv.org/abs/2107.05490" target="_blank" rel="noopener">
+                <papertitle>Sniffy Bug: A Fully Autonomous Swarm of Gas-Seeking Nano Quadcopters in Cluttered Environments</papertitle>
+              </a>
+              <p class="pub-authors">
+                <strong>Bardienus P. Duisterhof</strong>,
+                <a href="https://shushuai3.github.io/">Shushuai Li</a>,
+                <a href="https://www.javierburgues.com/">Javier Burgués</a>,
+                <a href="https://scholar.harvard.edu/vijay-janapa-reddi/home">Vijay Janapa Reddi</a>,
+                <a href="http://www.bene-guido.eu/wordpress/">Guido C.H.E. de Croon</a>
+              </p>
+              <p class="pub-meta">
+                <span class="venue-chip">IROS 2021</span>
+                <span class="pub-links">
+                  <a href="https://arxiv.org/abs/2107.05490" target="_blank" rel="noopener">arXiv</a>
+                  <span class="sep">/</span>
+                  <a href="https://www.youtube.com/watch?v=hj_SBSpK5qg" target="_blank" rel="noopener">video</a>
+                  <span class="sep">/</span>
+                  <a href="https://github.com/tudelft/sniffy-bug" target="_blank" rel="noopener">code</a>
+                </span>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item reveal">
+            <a class="pub-thumb" href="https://storage.googleapis.com/pub-tools-public-publication-data/pdf/9d61bdd2dc56c22a5d93cb78f07a70ebe3521052.pdf" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <video muted autoplay loop playsinline preload="metadata">
+                <source src="images/tinyrl.mp4" type="video/mp4">
+              </video>
+            </a>
+            <div class="pub-body">
+              <a href="https://storage.googleapis.com/pub-tools-public-publication-data/pdf/9d61bdd2dc56c22a5d93cb78f07a70ebe3521052.pdf" target="_blank" rel="noopener">
+                <papertitle>Tiny Robot Learning (tinyRL) for Source Seeking on a Nano Quadcopter</papertitle>
+              </a>
+              <p class="pub-authors">
+                <strong>Bardienus P. Duisterhof</strong>,
+                <a href="https://scholar.harvard.edu/srivatsan-krishnan">Srivatsan Krishnan</a>,
+                Jonathan J. Cruz,
+                <a href="https://www.colbybanbury.com/">Colby R. Banbury</a>,
+                William Fu,
+                <a href="https://www.afaust.info/">Aleksandra Faust</a>,
+                <a href="http://www.bene-guido.eu/wordpress/">Guido C.H.E. de Croon</a>,
+                <a href="https://scholar.harvard.edu/vijay-janapa-reddi/home">Vijay Janapa Reddi</a>
+              </p>
+              <p class="pub-meta">
+                <span class="venue-chip">ICRA 2021</span>
+                <span class="pub-links">
+                  <a href="https://storage.googleapis.com/pub-tools-public-publication-data/pdf/9d61bdd2dc56c22a5d93cb78f07a70ebe3521052.pdf" target="_blank" rel="noopener">paper</a>
+                  <span class="sep">/</span>
+                  <a href="https://www.youtube.com/watch?v=wmVKbX7MOnU" target="_blank" rel="noopener">video</a>
+                  <span class="sep">/</span>
+                  <a href="https://github.com/harvard-edge/source-seeking" target="_blank" rel="noopener">code</a>
+                </span>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item reveal">
+            <a class="pub-thumb" href="https://www.worldscientific.com/doi/10.1142/S2301385020500235" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <video muted autoplay loop playsinline preload="metadata">
+                <source src="images/delfly.mp4" type="video/mp4">
+              </video>
+            </a>
+            <div class="pub-body">
+              <a href="https://www.worldscientific.com/doi/10.1142/S2301385020500235" target="_blank" rel="noopener">
+                <papertitle>A Tailless Flapping Wing MAV Performing Monocular Visual Servoing Tasks</papertitle>
+              </a>
+              <p class="pub-authors">
+                Diana A. Olejnik,
+                <strong>Bardienus P. Duisterhof</strong>,
+                <a href="https://www.matejkarasek.eu/wp/">Matej Karásek</a>,
+                Kirk Y. W. Scheper,
+                Tom van Dijk,
+                <a href="http://www.bene-guido.eu/wordpress/">Guido C.H.E. de Croon</a>
+              </p>
+              <p class="pub-meta">
+                <span class="venue-chip">Unmanned Systems, Vol. 08, No. 04, pp. 287–294, 2020</span>
+                <span class="pub-links">
+                  <a href="https://www.worldscientific.com/doi/10.1142/S2301385020500235" target="_blank" rel="noopener">paper</a>
+                  <span class="sep">/</span>
+                  <a href="https://www.youtube.com/watch?v=GoZ1WmADGbk" target="_blank" rel="noopener">video</a>
+                </span>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="news" class="section section-news">
+      <div class="section-inner">
+        <heading>News</heading>
+        <ul class="news-list">
+          <li class="reveal">
+            <span class="news-date">Sept 2025</span>
+            <span class="news-text"><a href="https://rayst3r.github.io/">RaySt3R</a> has been accepted at <a href="https://nips.cc/">NeurIPS 2025</a>! See you in San Diego 🌴</span>
+          </li>
+          <li class="reveal">
+            <span class="news-date">June 2025</span>
+            <span class="news-text">We are excited to release <a href="https://rayst3r.github.io/">RaySt3R</a>, a method for predicting novel depth maps for zero-shot object completion!</span>
+          </li>
+          <li class="reveal">
+            <span class="news-date">Mar 2025</span>
+            <span class="news-text">MASt3R-SfM has received the <span class="highlight-amber">best student paper award</span> at <a href="https://3dvconf.github.io/2025/">3DV 2025</a>! Thanks to all collaborators at <a href="https://europe.naverlabs.com/">Naver Labs Europe</a> 🧗</span>
+          </li>
+          <li class="reveal">
+            <span class="news-date">Dec 2024</span>
+            <span class="news-text">MASt3R-SfM and DynOMo have been accepted at <a href="https://3dvconf.github.io/2025/">3DV 2025</a>!</span>
+          </li>
+          <li class="reveal">
+            <span class="news-date">Nov 2024</span>
+            <span class="news-text">Thanks to the <a href="https://www.cs.cmu.edu/cmlh/2024-generative-ai-fellows">CMLH Fellowship in Generative AI in Healthcare</a> for generously supporting my research!</span>
+          </li>
+          <li class="reveal">
+            <span class="news-date">Sept 2024</span>
+            <span class="news-text"><a href="https://kth-rpl.github.io/cloth-splatting/">Cloth-Splatting</a> has been accepted at <a href="https://www.corl.org/">CoRL 2024</a>!</span>
+          </li>
+        </ul>
+        <details class="news-more">
+          <summary>Show earlier news</summary>
+          <ul class="news-list news-older">
+            <li>
+              <span class="news-date">Aug 2024</span>
+              <span class="news-text"><a href="https://deformgs.github.io/">DeformGS</a> has been accepted at <a href="https://www.algorithmic-robotics.org/">WAFR 2024</a>!</span>
+            </li>
+            <li>
+              <span class="news-date">July 2024</span>
+              <span class="news-text">I started my internship at NAVER Labs Europe! Excited to work with Jérome Revaud, Vincent Leroy and the rest of the DUSt3R team.</span>
+            </li>
+            <li>
+              <span class="news-date">Jan 2024</span>
+              <span class="news-text">2 papers accepted at <a href="https://2024.ieee-icra.org/">ICRA 2024</a>! See you in Japan 🇯🇵.</span>
+            </li>
+            <li>
+              <span class="news-date">Nov 2023</span>
+              <span class="news-text">Check out our recent work on <a href="https://md-splatting.github.io">MD-Splatting</a>, a method for dense tracking and novel view synthesis of cloth 🧣.</span>
+            </li>
+            <li>
+              <span class="news-date">July 2023</span>
+              <span class="news-text">Our paper on NeRFs for transparent objects has been accepted for a 🌟 spotlight 🌟 presentation at the <a href="https://sites.google.com/view/iccv23trickyworkshop">ICCV23 — TRICKY Workshop</a>.</span>
+            </li>
+            <li>
+              <span class="news-date">April 2023</span>
+              <span class="news-text">Thanks to the <a href="https://www.cs.cmu.edu/cmlh/">CMLH Fellowship in Digital Health Innovation</a> for generously supporting my research!</span>
+            </li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
+    <section id="teaching" class="section section-teaching">
+      <div class="section-inner">
+        <heading>Teaching</heading>
+        <ul class="link-list">
+          <li class="reveal"><a href="https://16820advancedcv.github.io/">16-820 at CMU: Advanced Computer Vision</a></li>
+          <li class="reveal"><a href="https://sites.google.com/andrew.cmu.edu/16-720-spring-2024/home">16-720 at CMU: Introduction to Computer Vision</a></li>
+          <li class="reveal"><a href="https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=38992">AE2235-I: Aerospace Systems &amp; Control Theory</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="media" class="section section-media">
+      <div class="section-inner">
+        <heading>Media Coverage</heading>
+        <ul class="link-list">
+          <li class="reveal"><a href="https://www.forbes.com/sites/davidhambling/2021/07/15/watch-this-autonomous-microdrone-swarm-sniff-out-a-gas-leak/">Forbes</a></li>
+          <li class="reveal"><a href="https://spectrum.ieee.org/video-friday-fluidic-fingers">IEEE Spectrum Video Friday</a></li>
+          <li class="reveal"><a href="https://robohub.org/sniffy-bug-a-fully-autonomous-swarm-of-gas-seeking-nano-quadcopters-in-cluttered-environments/">Robohub</a></li>
+          <li class="reveal"><a href="https://www.bitcraze.io/author/bart/">Bitcraze Blog</a></li>
+          <li class="reveal"><a href="https://www.youtube.com/watch?v=BJhYaLf_n8g">PiXL Drone Show</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="awards" class="section section-awards">
+      <div class="section-inner">
+        <heading>Awards</heading>
+        <ul class="link-list">
+          <li class="reveal"><a href="https://europe.naverlabs.com/research/publications/mast3r-sfm-a-fully-integrated-solution-for-unconstrained-structure-from-motion/">MASt3R-SfM Best Student Paper Award, 3DV 2025</a></li>
+          <li class="reveal"><a href="https://www.tudelft.nl/en/stories/articles/stronger-together-swarm-mini-drones-sniff-out-gas-leaks">Best Graduate in Engineering, TU Delft, academic year 2020-2021</a></li>
+          <li class="reveal"><a href="https://www.tudelft.nl/en/stories/articles/stronger-together-swarm-mini-drones-sniff-out-gas-leaks">Best Graduate in Aerospace Engineering, TU Delft, academic year 2020-2021</a></li>
+          <li class="reveal"><a href="https://www.youtube.com/watch?v=GoZ1WmADGbk">Innovation Award, IMAV 2018 Autonomous Drone Race</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <nav class="footer-socials" aria-label="Social links">
+        <a href="https://scholar.google.com/citations?user=LLsYMFYAAAAJ&hl=en">Google Scholar</a>
+        <span class="sep">/</span>
+        <a href="https://twitter.com/bduisterhof">Twitter</a>
+        <span class="sep">/</span>
+        <a href="https://bsky.app/profile/bardienus.bsky.social">Bluesky</a>
+        <span class="sep">/</span>
+        <a href="https://www.linkedin.com/in/duisterhof/">LinkedIn</a>
+        <span class="sep">/</span>
+        <a href="https://github.com/duisterhof/">Github</a>
+      </nav>
+      <p class="footer-email" aria-live="polite">
+        <button class="email-reveal email-reveal-compact"
+                type="button"
+                data-user="bduister"
+                data-domain="cmu.edu"
+                aria-label="Reveal contact email">
+          <span class="email-icon" aria-hidden="true">✉</span> Reveal email
+        </button>
+      </p>
+      <p class="footer-attr">
+        Modified version of template from <a href="https://jonbarron.info/">Jon Barron</a> (<a href="https://github.com/jonbarron/jonbarron_website">source</a>), and vibe-coded with Cursor.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Section reveal: fade-and-rise on enter, one-shot. Honors prefers-reduced-motion.
+    (function() {
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var revealEls = document.querySelectorAll('.reveal');
+      if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+        revealEls.forEach(function(el) { el.classList.add('is-visible'); });
+      } else {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        revealEls.forEach(function(el) { observer.observe(el); });
+      }
+
+      // Email reveal: split-data, runtime construction, clipboard copy, fading "Copied ✓".
+      // The full address never appears as a contiguous literal in source.
+      document.querySelectorAll('.email-reveal').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var user = btn.dataset.user;
+          var domain = btn.dataset.domain;
+          if (!user || !domain) return;
+          var addr = user + '@' + domain;
+
+          var a = document.createElement('a');
+          a.className = btn.className + ' email-reveal-revealed';
+          a.setAttribute('href', 'mailto:' + addr);
+
+          var icon = document.createElement('span');
+          icon.className = 'email-icon';
+          icon.setAttribute('aria-hidden', 'true');
+          icon.textContent = '✉';
+          a.appendChild(icon);
+          a.appendChild(document.createTextNode(' ' + addr + ' '));
+
+          var copied = document.createElement('span');
+          copied.className = 'email-copied';
+          copied.setAttribute('role', 'status');
+          copied.textContent = 'Copied ✓';
+          a.appendChild(copied);
+
+          btn.replaceWith(a);
+
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(addr).catch(function() {});
+          }
+          setTimeout(function() {
+            copied.classList.add('email-copied-fade');
+          }, 1500);
+        });
+      });
+
+      // Mobile nav toggle
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (toggle && nav) {
+        var setOpen = function(open) {
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          nav.classList.toggle('is-open', open);
+          document.body.classList.toggle('nav-open', open);
+        };
+        toggle.addEventListener('click', function() {
+          var isOpen = toggle.getAttribute('aria-expanded') === 'true';
+          setOpen(!isOpen);
+        });
+        nav.addEventListener('click', function(e) {
+          if (e.target.tagName === 'A') setOpen(false);
+        });
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+            setOpen(false);
+            toggle.focus();
+          }
+        });
+      }
+    })();
+  </script>
+
+  <!-- SCENE: mount -->
+  <script type="module" src="scene/main.js"></script>
+</body>
 </html>
