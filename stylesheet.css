@@ -173,6 +173,28 @@ name {
   border-radius: 9999px;
   filter: blur(36px);
 }
+/* Wandering drift; offsets and periods differ per orb so motion reads as arbitrary */
+.orb-a { animation: orb-drift-a 16s ease-in-out infinite; }
+.orb-b { animation: orb-drift-b 21s ease-in-out infinite; }
+.orb-c { animation: orb-drift-c 18s ease-in-out infinite; }
+@keyframes orb-drift-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25%      { transform: translate(110px, 70px) scale(1.12); }
+  50%      { transform: translate(30px, 160px) scale(0.92); }
+  75%      { transform: translate(-90px, 60px) scale(1.06); }
+}
+@keyframes orb-drift-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25%      { transform: translate(-120px, 90px) scale(0.93); }
+  50%      { transform: translate(-40px, -80px) scale(1.1); }
+  75%      { transform: translate(80px, 50px) scale(1.0); }
+}
+@keyframes orb-drift-c {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25%      { transform: translate(90px, -60px) scale(1.08); }
+  50%      { transform: translate(170px, 30px) scale(0.94); }
+  75%      { transform: translate(50px, -100px) scale(1.09); }
+}
 .orb-a {
   left: -80px;
   top: -80px;
@@ -242,14 +264,6 @@ name {
   box-shadow: 0 4px 18px rgba(34, 211, 238, 0.25);
 }
 .brand-text { line-height: 1.1; }
-.brand-sub {
-  font-family: var(--ff-body);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
 .brand-name {
   font-family: var(--ff-display);
   font-weight: 600;
@@ -312,7 +326,6 @@ name {
 @media (max-width: 768px) {
   .nav-links { gap: var(--s-3); flex-wrap: wrap; justify-content: flex-end; }
   .nav-links a { letter-spacing: 0.02em; font-size: 12px; }
-  .brand-sub { display: none; }
 }
 
 @media (max-width: 640px) {
@@ -415,11 +428,12 @@ name {
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: 78vh;
+  min-height: 26vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--s-8) var(--s-4);
+  /* Extra bottom padding keeps the scroll cue clear of the CTA row */
+  padding: var(--s-6) var(--s-4) var(--s-8);
 }
 /* Soft seam between hero and About — 56px fade to bg-2 */
 .hero::after {
@@ -456,11 +470,12 @@ name {
   pointer-events: none;
 }
 .hero-name {
-  margin: 0 0 var(--s-4) 0;
+  margin: 0 0 var(--s-3) 0;
   line-height: 1.05;
 }
 /* Override gradient text on the hero name only — keep solid for legibility */
 .hero-name name {
+  font-size: clamp(32px, 4vw, 48px); /* compact hero: keep the name to one line */
   background: none;
   -webkit-text-fill-color: var(--text);
   color: var(--text);
@@ -468,7 +483,7 @@ name {
                0 0 18px rgba(0, 0, 0, 0.5);
 }
 .hero-tagline {
-  margin: 0 auto var(--s-6) auto;
+  margin: 0 auto var(--s-4) auto;
   max-width: 600px;
   font-family: var(--ff-display);
   font-size: clamp(18px, 2vw, 22px);
@@ -529,13 +544,13 @@ name {
 }
 
 @media (max-width: 768px) {
-  .hero { min-height: 72vh; padding: var(--s-7) var(--s-4); }
+  .hero { min-height: 24vh; padding: var(--s-6) var(--s-4) var(--s-8); }
   .hero-scroll-cue { bottom: var(--s-4); }
 }
 
 /* -------------------- Sections -------------------- */
 .section {
-  padding-block: var(--s-8);
+  padding-block: var(--s-7);
   position: relative;
 }
 .section + .section { border-top: 1px solid var(--border); }
@@ -551,7 +566,7 @@ name {
   margin: -8px 0 var(--s-6) 0;
 }
 @media (max-width: 768px) {
-  .section { padding-block: 64px; }
+  .section { padding-block: 40px; }
 }
 
 /* Anchor offset for sticky header */
