@@ -13,16 +13,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 
-  <!-- SCENE: importmap -->
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
-    }
-  }
-  </script>
-
   <!-- Global site tag (gtag.js) - Google Analytics DO NOT COPY THIS -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75286303-1"></script>
   <script>
@@ -69,7 +59,6 @@
 
   <main>
     <section id="hero" class="hero">
-      <div id="scene-root" class="scene-root" aria-hidden="true"></div>
       <div class="hero-content">
         <h1 class="hero-name"><name>Bardienus Duisterhof</name></h1>
         <p class="hero-tagline">
@@ -160,6 +149,38 @@
     <section id="research" class="section section-research">
       <div class="section-inner">
         <heading>Selected Research</heading>
+
+        <article class="paper-card reveal">
+          <a class="paper-media" href="https://adamhung60.github.io/3PoinTr/" target="_blank" rel="noopener" aria-label="3PoinTr project page">
+            <video class="hover-play" muted loop playsinline preload="metadata" poster="images/3pointr_poster.jpg">
+              <source src="images/3pointr.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </a>
+          <div class="paper-text">
+            <a href="https://adamhung60.github.io/3PoinTr/" target="_blank" rel="noopener">
+              <papertitle>3PoinTr: 3D Point Tracks for Learning Manipulation from Unconstrained Human Videos</papertitle>
+            </a>
+            <p class="paper-authors">
+              <a href="https://adamhung60.github.io/">Adam Hung</a>,
+              <strong>Bardienus P. Duisterhof</strong>,
+              <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>
+            </p>
+            <p class="paper-venue"><em>arXiv preprint, 2026</em></p>
+            <p class="paper-summary">
+              <span class="highlight-amber">3PoinTr</span> learns manipulation from unconstrained human videos:
+              videos where the human demonstrator can act freely rather than mimicking target robot kinematics.
+              3PoinTr first predicts dense 3D point tracks — how the scene should move to complete the task —
+              and then conditions a closed-loop multitask policy on these tracks. 3PoinTr outperforms strong
+              behavior cloning and learning-from-video baselines across simulated and real-world evaluations.
+            </p>
+            <p class="paper-links">
+              <a href="https://adamhung60.github.io/3PoinTr/" target="_blank" rel="noopener">project</a>
+              <span class="sep">/</span>
+              <a href="https://arxiv.org/abs/2603.08485" target="_blank" rel="noopener">arxiv</a>
+            </p>
+          </div>
+        </article>
 
         <article class="paper-card reveal">
           <a class="paper-media" href="https://rayst3r.github.io/" target="_blank" rel="noopener" aria-label="RaySt3R project page">
@@ -378,6 +399,32 @@
         <p class="section-blurb">The complete bibliography. The selected works above are repeated here in compact form.</p>
 
         <ul class="pub-list">
+          <li class="pub-item reveal">
+            <a class="pub-thumb" href="https://adamhung60.github.io/3PoinTr/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <video class="hover-play" muted loop playsinline preload="metadata" poster="images/3pointr_poster.jpg">
+                <source src="images/3pointr.mp4" type="video/mp4">
+              </video>
+            </a>
+            <div class="pub-body">
+              <a href="https://adamhung60.github.io/3PoinTr/" target="_blank" rel="noopener">
+                <papertitle>3PoinTr: 3D Point Tracks for Learning Manipulation from Unconstrained Human Videos</papertitle>
+              </a>
+              <p class="pub-authors">
+                <a href="https://adamhung60.github.io/">Adam Hung</a>,
+                <strong>Bardienus P. Duisterhof</strong>,
+                <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>
+              </p>
+              <p class="pub-meta">
+                <span class="venue-chip">arXiv 2026</span>
+                <span class="pub-links">
+                  <a href="https://adamhung60.github.io/3PoinTr/" target="_blank" rel="noopener">project</a>
+                  <span class="sep">/</span>
+                  <a href="https://arxiv.org/abs/2603.08485" target="_blank" rel="noopener">arxiv</a>
+                </span>
+              </p>
+            </div>
+          </li>
+
           <li class="pub-item reveal">
             <a class="pub-thumb" href="https://rayst3r.github.io/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
               <video muted autoplay loop playsinline preload="metadata">
@@ -927,10 +974,19 @@
           }
         });
       }
+
+      // Hover-to-play videos: show poster at rest, animate while hovered
+      document.querySelectorAll('video.hover-play').forEach(function(video) {
+        var hoverTarget = video.closest('a') || video;
+        hoverTarget.addEventListener('mouseenter', function() {
+          video.play().catch(function() {});
+        });
+        hoverTarget.addEventListener('mouseleave', function() {
+          video.pause();
+        });
+      });
     })();
   </script>
 
-  <!-- SCENE: mount -->
-  <script type="module" src="scene/main.js"></script>
 </body>
 </html>
