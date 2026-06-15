@@ -142,16 +142,78 @@
           </p>
         </div>
         <aside class="about-photo reveal">
-          <a href="images/avatar.jpg">
-            <img src="images/avatar.jpg" alt="Portrait of Bardienus Duisterhof">
+          <a id="avatar-link" href="images/avatar.jpg">
+            <img id="avatar-img" src="images/avatar.jpg" alt="Portrait of Bardienus Duisterhof">
           </a>
         </aside>
+        <script>
+          // Show a portrait that differs from the previous load. We remember the
+          // last pick in localStorage and choose at random among the others, so
+          // every reload swaps the photo (with two photos this just alternates).
+          (function () {
+            const avatars = ["images/avatar.jpg", "images/avatar_2.jpg"];
+            let last = null;
+            try {
+              last = localStorage.getItem("avatarLast");
+            } catch (e) {
+              /* storage unavailable (private mode) — fall back to plain random */
+            }
+            const choices = avatars.filter((a) => a !== last);
+            const pool = choices.length ? choices : avatars;
+            const pick = pool[Math.floor(Math.random() * pool.length)];
+            document.getElementById("avatar-img").src = pick;
+            document.getElementById("avatar-link").href = pick;
+            try {
+              localStorage.setItem("avatarLast", pick);
+            } catch (e) {
+              /* ignore: persistence is best-effort */
+            }
+          })();
+        </script>
       </div>
     </section>
 
     <section id="research" class="section section-research">
       <div class="section-inner">
         <heading>Selected Research</heading>
+
+        <article class="paper-card reveal">
+          <a class="paper-media" href="https://modality-forcing.github.io/" target="_blank" rel="noopener" aria-label="Modality Forcing project page">
+            <video class="hover-play" muted loop playsinline preload="metadata" poster="images/mofo_poster.jpg">
+              <source src="images/mofo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </a>
+          <div class="paper-text">
+            <a href="https://modality-forcing.github.io/" target="_blank" rel="noopener">
+              <papertitle>Modality Forcing for Scalable Spatial Generation</papertitle>
+            </a>
+            <p class="paper-authors">
+              <strong>Bardienus P. Duisterhof</strong>,
+              <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>,
+              <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>,
+              <a href="https://web.eecs.umich.edu/~justincj/">Justin Johnson</a>,
+              <a href="https://keunhong.com/">Keunhong Park</a>
+            </p>
+            <p class="paper-venue"><em>arXiv preprint, 2026</em></p>
+            <p class="paper-summary">
+              <span class="highlight-amber">Modality Forcing</span> turns a pretrained text-to-image model into a
+              joint image-depth generator with a simple post-training recipe: one DiT, separate noise levels per
+              modality, and per-modality decoders that allow training on sparse real-world depth. Depth accuracy
+              scales with T2I pre-training (300M → 3B), and our strongest model is competitive with state-of-the-art
+              monocular depth estimators, reducing AbsRel by 57% over prior joint image-depth generative models.
+            </p>
+            <p class="paper-links">
+              <a href="https://modality-forcing.github.io/" target="_blank" rel="noopener">project</a>
+              <span class="sep">/</span>
+              <a href="https://arxiv.org/abs/2606.13676" target="_blank" rel="noopener">arxiv</a>
+              <span class="sep">/</span>
+              <a href="https://github.com/Duisterhof/modality-forcing" target="_blank" rel="noopener">code</a>
+              <span class="sep">/</span>
+              <a href="https://huggingface.co/spaces/bartduis/modality_forcing" target="_blank" rel="noopener">demo</a>
+            </p>
+          </div>
+        </article>
 
         <article class="paper-card reveal">
           <a class="paper-media" href="https://adamhung60.github.io/3PoinTr/" target="_blank" rel="noopener" aria-label="3PoinTr project page">
@@ -402,6 +464,38 @@
         <p class="section-blurb">The complete bibliography. The selected works above are repeated here in compact form.</p>
 
         <ul class="pub-list">
+          <li class="pub-item reveal">
+            <a class="pub-thumb" href="https://modality-forcing.github.io/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <video class="hover-play" muted loop playsinline preload="metadata" poster="images/mofo_poster.jpg">
+                <source src="images/mofo.mp4" type="video/mp4">
+              </video>
+            </a>
+            <div class="pub-body">
+              <a href="https://modality-forcing.github.io/" target="_blank" rel="noopener">
+                <papertitle>Modality Forcing for Scalable Spatial Generation</papertitle>
+              </a>
+              <p class="pub-authors">
+                <strong>Bardienus P. Duisterhof</strong>,
+                <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>,
+                <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>,
+                <a href="https://web.eecs.umich.edu/~justincj/">Justin Johnson</a>,
+                <a href="https://keunhong.com/">Keunhong Park</a>
+              </p>
+              <p class="pub-meta">
+                <span class="venue-chip">arXiv 2026</span>
+                <span class="pub-links">
+                  <a href="https://modality-forcing.github.io/" target="_blank" rel="noopener">project</a>
+                  <span class="sep">/</span>
+                  <a href="https://arxiv.org/abs/2606.13676" target="_blank" rel="noopener">arxiv</a>
+                  <span class="sep">/</span>
+                  <a href="https://github.com/Duisterhof/modality-forcing" target="_blank" rel="noopener">code</a>
+                  <span class="sep">/</span>
+                  <a href="https://huggingface.co/spaces/bartduis/modality_forcing" target="_blank" rel="noopener">demo</a>
+                </span>
+              </p>
+            </div>
+          </li>
+
           <li class="pub-item reveal">
             <a class="pub-thumb" href="https://adamhung60.github.io/3PoinTr/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
               <video class="hover-play" muted loop playsinline preload="metadata" poster="images/3pointr_poster.jpg">
