@@ -1,0 +1,5 @@
+# Redirect the former domain to the new homepage without redirecting bardienus.com.
+http://bart-ai.com/*       https://bardienus.com/ 301!
+https://bart-ai.com/*      https://bardienus.com/ 301!
+http://www.bart-ai.com/*   https://bardienus.com/ 301!
+https://www.bart-ai.com/*  https://bardienus.com/ 301!
