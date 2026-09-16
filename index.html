@@ -61,7 +61,7 @@
       <div class="hero-content">
         <h1 class="hero-name"><name>Bardienus Duisterhof</name></h1>
         <p class="hero-tagline">
-          I build generative models that learn to see, reconstruct, and imagine the 3D world.
+          I build generative models to reconstruct, imagine and act in the world.
         </p>
         <div class="hero-cta">
           <a class="btn-primary" href="data/CV.pdf" target="_blank" rel="noopener">CV <span class="arr">↗</span></a>
@@ -177,6 +177,39 @@
     <section id="research" class="section section-research">
       <div class="section-inner">
         <heading>Selected Research</heading>
+
+        <article class="paper-card reveal" id="modar">
+          <a class="paper-media" href="https://adamhung60.github.io/ModAR/" target="_blank" rel="noopener" aria-label="ModAR project page" style="aspect-ratio: 1792 / 684; align-self: center;">
+            <video muted autoplay loop playsinline preload="metadata" poster="images/modar_poster.jpg">
+              <source src="images/modar.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </a>
+          <div class="paper-text">
+            <a href="https://adamhung60.github.io/ModAR/" target="_blank" rel="noopener">
+              <papertitle>ModAR: Modality-Autoregressive World-Action Models</papertitle>
+            </a>
+            <p class="paper-authors">
+              <a href="https://adamhung60.github.io/">Adam Hung</a>,
+              <strong>Bardienus P. Duisterhof</strong>,
+              <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>,
+              <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>
+            </p>
+            <p class="paper-venue"><em>arXiv preprint, 2026</em></p>
+            <p class="paper-summary">
+              <span class="highlight-amber">ModAR</span> generates future point tracks, DINO features, and depth
+              sequentially, then predicts robot actions conditioned on these futures. Training from scratch lets
+              us isolate the effects of modality choice, generation order, and actionless data. The resulting
+              model improves manipulation across simulated and real-world evaluations and benefits from human
+              demonstrations.
+            </p>
+            <p class="paper-links">
+              <a href="https://adamhung60.github.io/ModAR/" target="_blank" rel="noopener">project</a>
+              <span class="sep">/</span>
+              <a href="https://arxiv.org/abs/2609.17524" target="_blank" rel="noopener">arxiv</a>
+            </p>
+          </div>
+        </article>
 
         <article class="paper-card reveal">
           <a class="paper-media" href="https://www.worldlabs.ai/blog/atlas" target="_blank" rel="noopener" aria-label="Atlas blog post">
@@ -523,6 +556,33 @@
         <p class="section-blurb">The complete bibliography. The selected works above are repeated here in compact form.</p>
 
         <ul class="pub-list">
+          <li class="pub-item reveal">
+            <a class="pub-thumb" href="https://adamhung60.github.io/ModAR/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <video muted autoplay loop playsinline preload="metadata" poster="images/modar_poster.jpg" style="object-fit: contain;">
+                <source src="images/modar.mp4" type="video/mp4">
+              </video>
+            </a>
+            <div class="pub-body">
+              <a href="https://adamhung60.github.io/ModAR/" target="_blank" rel="noopener">
+                <papertitle>ModAR: Modality-Autoregressive World-Action Models</papertitle>
+              </a>
+              <p class="pub-authors">
+                <a href="https://adamhung60.github.io/">Adam Hung</a>,
+                <strong>Bardienus P. Duisterhof</strong>,
+                <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>,
+                <a href="https://ichnow.ski/">Jeffrey Ichnowski</a>
+              </p>
+              <p class="pub-meta">
+                <span class="venue-chip">arXiv 2026</span>
+                <span class="pub-links">
+                  <a href="https://adamhung60.github.io/ModAR/" target="_blank" rel="noopener">project</a>
+                  <span class="sep">/</span>
+                  <a href="https://arxiv.org/abs/2609.17524" target="_blank" rel="noopener">arxiv</a>
+                </span>
+              </p>
+            </div>
+          </li>
+
           <li class="pub-item reveal">
             <a class="pub-thumb" href="https://modality-forcing.github.io/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
               <video muted autoplay loop playsinline preload="metadata" poster="images/mofo_poster.jpg?v=2">
