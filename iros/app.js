@@ -4,18 +4,19 @@ const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const ext=(url,label,cls='')=>`<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)} <span aria-hidden="true">↗</span></a>`;
 const shortDate=d=>new Intl.DateTimeFormat('en-US',{timeZone:ZONE,weekday:'short',month:'short',day:'numeric'}).format(new Date(stamp(d,'12:00')));
 const fullDate=d=>new Intl.DateTimeFormat('en-US',{timeZone:ZONE,weekday:'long',month:'long',day:'numeric'}).format(new Date(stamp(d,'12:00')));
-const naturalName=s=>s.split(';').slice(0,2).map(x=>x.trim().split(',').reverse().join(' ').trim()).join(' · ');
+const affiliations=s=>{const names=new Map();for(const name of s.split(';').map(x=>x.trim()).filter(Boolean)){const key=name.toLowerCase();if(!names.has(key)||names.get(key)===key)names.set(key,name)}return [...names.values()].join(' · ')};
+const naturalName=s=>s.split(';').map(x=>x.trim().split(',').reverse().join(' ').trim()).join(' · ');
 let data,items,selected=initialDay(),query='',topic='all',followNow=true;
 let expanded=new Set(),pastOpen=new Set();
 function badge(s,item,now){return s==='live'?`<span class="status live">Happening now · ${minutesUntil(item.date,item.end,now)} min left</span>`:s==='past'?'<span class="status">Finished</span>':`<span class="status upcoming">${relativeStart(item,now)}</span>`;}
 function paperCard(p){return `<article class="paper-card" id="paper-${p.id}">
  <div class="card-top"><span class="topic">${esc(p.topic)}</span><span class="priority ${p.priority===1?'primary':''}">${p.priority===1?'Make time':'Explore'}</span></div>
- <h4>${esc(p.title)}</h4><p class="authors">${esc(naturalName(p.authors))}${p.authors.split(';').length>2?' + team':''}</p>
+ <h4>${esc(p.title)}</h4><p class="authors">${esc(naturalName(p.authors))}</p><p class="affiliations">${esc(affiliations(p.affiliations))}</p>
  <div class="poster-location"><div><span class="location-label">POSTER POD</span><strong>${esc(p.pod)}</strong></div><div class="face"><strong>${esc(p.face)} face</strong><span>${esc(p.venue)} · ${p.start}–${p.end}</span></div></div>
  <p class="eyebrow" style="margin-bottom:8px">ABSTRACT SUMMARY</p><p class="card-summary">${esc(p.summary)}</p>
  <div class="card-links">${ext(p.posterUrl,'Find poster','button-link')}${p.projectUrl?ext(p.projectUrl,p.projectLabel,'button-link secondary'):''}${ext(p.sourceUrl,'Paper & abstract','subtle-link')}</div>
  ${!p.projectUrl?'<p class="project-note">Project website not listed in the verified sources.</p>':''}
- <details class="paper-details" data-paper="${p.id}" ${expanded.has(p.id)?'open':''}><summary>Conversation notes & authors <span aria-hidden="true">+</span></summary><div class="details-body"><p class="eyebrow">WHY THIS PAPER</p><p>${esc(p.why)}</p><p class="eyebrow">WORTH ASKING</p><p>${esc(p.question)}</p><p class="eyebrow">AUTHORS</p><p class="full-authors">${esc(p.authors)}</p><p class="muted">${esc(p.affiliations)}</p><p class="oral">Optional oral · ${p.oralTime} · room ${esc(p.oralRoom)}</p></div></details>
+ <details class="paper-details" data-paper="${p.id}" ${expanded.has(p.id)?'open':''}><summary>Conversation notes <span aria-hidden="true">+</span></summary><div class="details-body"><p class="eyebrow">WHY THIS PAPER</p><p>${esc(p.why)}</p><p class="eyebrow">WORTH ASKING</p><p>${esc(p.question)}</p><p class="oral">Optional oral · ${p.oralTime} · room ${esc(p.oralRoom)}</p></div></details>
  <span class="abstract-label">Abstract summary · paper #${p.id}</span>
  </article>`;}
 function eventCard(e,now){return `<article class="event-card ${e.kind==='Workshop posters'?'poster-event':''}" id="event-${e.id}"><div class="card-top"><span class="topic">${esc(e.kind)}</span><span class="priority ${e.recommended?'primary':''}">${e.recommended?'Recommended':'Alternative'}</span></div><h4>${esc(e.title)}</h4><p class="event-location">${e.kind==='Social'?'':'Room '}${esc(e.room)} <span>· ${e.start}–${e.end}</span></p><p>${esc(e.description)}</p>${e.highlights.length?`<details class="event-details"><summary>Program highlights</summary><ul>${e.highlights.map(h=>`<li>${esc(h)}</li>`).join('')}</ul></details>`:''}${ext(e.url,'Organizer program','button-link secondary')}</article>`;}
