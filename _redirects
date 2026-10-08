@@ -10,5 +10,5 @@ https://www.bart-ai.com/*  https://bardienus.com/ 301!
 /schedule   https://calendly.com/duisterhof/30-minutes 302!
 /schedule/  https://calendly.com/duisterhof/30-minutes 302!
 
-# Canonical directory path for the interactive SuperSurfer preview.
-/supersurfer /supersurfer/ 301!
+# Serve both spellings from the same preview without a self-redirect.
+/supersurfer /supersurfer/index.html 200
