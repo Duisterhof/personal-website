@@ -1,22 +1,15 @@
 # SuperSurfer product walkthrough
 
-The public website at https://bardienus.com/supersurfer/ is a scrollable walkthrough:
-1. An interactive nested-layout animation introduces drag, split, resize and space.
-2. An inspectable research surfboard explains roles, evidence gates and wakeups.
-3. Writing, research and coding presets follow the workshop proposal, E15 projection/
-   packing comparisons and training metric logger review used to develop the app.
+The public walkthrough follows representative VLA experiments, reviewing the
+training metric logger, and writing the ICLR workshop proposal. It starts with
+launching a paired method comparison, overlaid train/validation curves,
+agent-added result views, and a shared GPU queue. Coding and writing remain
+open in parallel. The next sections demonstrate panel docking, task surfboards
+and workflow presets using VS Code Light Modern.
 
-Light Modern colors match the pinned VS Code theme. Editors use Monaco; embedded
-PDFs use local PDF.js. The website never connects to production agents or compute.
-Metrics, scripted conversations, GPU counts and runs are representative demo data.
-LaTeX source preview is a demo renderer, not a remote compiler.
+This is a browser demonstration: metrics, runs and agent replies are simulated.
+Preparing a PR only creates a local demo draft. It submits no GPU jobs or GitHub
+changes and includes no private workspace state, credentials or measured claims.
+The writing preview does not compile LaTeX; the desktop application does.
 
-The full browser-local workspace is at playground.html?workflow=writing (or research,
-coding). Root index.html is the scrollable story. The preview server on big-tulip
-continues on port 8892; public hosting uses the existing personal-site Netlify deploy.
-
-Validation: scroll height, animation controls, nested separator resizing, surfboard
-rules, preset switching, four overlaid curves, queue interaction, actual Monaco patch
-acceptance, writing source/title, mobile document width and no JS errors all pass.
-Bundled assets retain upstream licenses in vendor/. Local source and layouts stay
-in browser storage. Reset affects only the demo, never a production workspace.
+Published at https://bardienus.com/supersurfer/.
