@@ -17,7 +17,7 @@ async function initEditor(){
   editor=monaco.editor.create($('#source-editor'),{model:models[activeFile],theme:'surfer-light-modern',automaticLayout:true,fontSize:13,fontFamily:'Menlo, Monaco, monospace',minimap:{enabled:false},scrollBeyondLastLine:false,wordWrap:'off',padding:{top:16,bottom:16},lineNumbersMinChars:3,renderLineHighlight:'line',overviewRulerLanes:0,hideCursorInOverviewRuler:true,ariaLabel:'Real Python source editor',tabSize:4});
   editor.onDidChangeCursorSelection(()=>{const sel=editor.getSelection();$('#attach-selection').disabled=!sel||sel.isEmpty();$('#editor-position').textContent=sel?`Ln ${sel.positionLineNumber}, Col ${sel.positionColumn}`:'Python';});
   editor.addAction({id:'supersurfer.attachSelection',label:'Add selection to SuperSurfer context',contextMenuGroupId:'navigation',contextMenuOrder:1,run:attachSelection});
-  editor.revealLineInCenter(30);updateSourceState();
+  editor.revealLineInCenter(30);updateSourceState();$('#select-implementation').disabled=false;$('#reset-source').disabled=false;
  })().catch(error=>{$('#source-editor').innerHTML='<p class="error-note">The source editor could not load. You can still download the original file below.</p>';console.error(error);editorPromise=null;});
  return editorPromise;
 }

@@ -9,3 +9,5 @@
 .board-mobile-picker{display:none}@media(max-width:850px){.board-mobile-picker{display:flex;align-items:center;gap:12px;padding:12px 18px;font-size:11px;color:#768696;background:#fafbfd;border-bottom:1px solid #e0e6ed}.board-mobile-picker select{flex:1;min-width:0;font-size:12px;padding:8px;border:1px solid #cdd6df;border-radius:4px;background:white;color:#4c6377}}
 
 @media(max-width:600px){.plot-card svg text{font-size:15px}}
+
+.source-toolbar button:disabled{opacity:.45;cursor:wait}
