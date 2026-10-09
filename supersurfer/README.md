@@ -27,6 +27,9 @@ Applying a surfboard never starts an agent, timer or job. These previews reset
 on reload; the full playground retains its existing browser-local persistence.
 
 The remaining sections demonstrate panel docking and the full writing,
-research and coding playground. The writing example is not a LaTeX compiler.
+research and coding playground. The layout tour is opt-in, runs once, and stops
+on interaction or when it leaves the screen. Switching playground workflows
+keeps the embedded workspace mounted, preserving drafts and imported files.
+The writing example is not a LaTeX compiler.
 The existing editable playground, PDF viewer, file imports and layout controls
 remain available. No interaction publishes code, calls a model or submits a job.
