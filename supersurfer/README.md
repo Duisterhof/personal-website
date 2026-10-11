@@ -4,6 +4,8 @@ Live page: https://bardienus.com/supersurfer/
 For local development, serve the repository root and open `/supersurfer/`.
 The website deploys through its existing Netlify integration from `master`.
 
+Updated for [SuperSurfer 0.1.42 — Workflows in chat](https://github.com/Duisterhof/SuperSurfer/releases/tag/v0.1.42), released October 11, 2026. The installed 0.1.42 app and its released `ui/workflow.js`, `server/workflow_library.py`, and `server/surfboards.py` were inspected for the new workflow interaction and presets. The header, hero, footer, and closing section link to the public [source repository](https://github.com/Duisterhof/SuperSurfer).
+
 The page retains the approved Light Modern visual direction and original app
 captures, and adds working local interactions around actual research evidence:
 
@@ -12,16 +14,17 @@ captures, and adds working local interactions around actual research evidence:
   expanded charts, pointer and keyboard inspection of nearest measured points.
 - Code: editable Monaco models containing unchanged source snapshots from
   Bart's vla-simple codebase. The implementation and its tests have separate
-  models. Selected lines attach to a local instruction draft with file, line,
+  models. The +/− controls and focused-editor Cmd/Ctrl +/− change text size, matching the new release. Selected lines attach to a local instruction draft with file, line,
   and revision context. Reset restores the original file. The actual VS Code
   backend and installed extensions remain available in original captures.
   This static demo's editor is Monaco; it does not start a VS Code backend or
   load the captured extensions. No draft is sent to an agent.
+- Workflow: a local interactive example of the new chat-and-proposal entry point. Research, software, and writing presets show the views and agent steps. Editable settings stage a proposal; review shows exact changes before application. Named Surfboards and versions last for the page session. Applying to this demo workspace updates the real plot selection; future defaults leave existing plots alone. Selected linked demo tasks use a three-way merge that preserves unrelated local changes, blocks overlapping changes, and supports batch undo. Stale reviews are rejected. Reusable versions omit project GPU/run caps. The demo never generates an AI response, launches work, or connects to actual tasks. Its condensed view cards and small example-task store illustrate the released workflow; they do not embed the full app or its backend.
 - Surfboard: a compact reconstruction of the recorded E19 workflow, embedded
-  directly in the Surfboards section. Nodes can be selected, dragged, or moved
+  under Advanced, directly in the Surfboards section. Nodes can be selected, dragged, or moved
   with arrow keys. Reset layout preserves configured settings. The inspector
   changes agent provider/instructions, requirements, compute limits, monitor
-  interval, and which objectives appear in Results. Settings last for this
+  interval, and which objectives appear in Results. Inspector edits stage a draft for review in the workflow panel; only reviewed application changes the plot selection. Settings last for this
   page session only. No agents, schedules, or queues are changed.
 - Requirements: a local sample request checker evaluates authorization,
   exact 40-character commit, recorded PR verification, and finite numeric MFU
@@ -66,6 +69,10 @@ These captures and research examples were approved for publication on October 9,
 - `workspace-demo.js`: original capture navigation and provider banner.
 - `research-plots.js`: numeric history rendering and plot interaction.
 - `interactive-workspace.js`: source editor, local draft, board, and inspector.
+- `workflow-preview.js`: proposal, presets, library versions, scopes, review, and undo UI.
+- `workflow-preview-state.mjs`: isolated draft/review/apply state and conservative three-way merge.
+- `tests/workflow-preview.test.mjs`: meaningful state-boundary tests; run with `node --test supersurfer/tests/workflow-preview.test.mjs` from the repository root.
+- `workflow-preview.css`: Light Modern workflow panel and responsive layouts.
 - `preview-rules.mjs`: pure local sample checks and range validation.
 - `workspace-demo.css`, `interactive-workspace.css`: responsive layout.
 - Existing Monaco bundle in `vendor/monaco/`, with its license notices.
