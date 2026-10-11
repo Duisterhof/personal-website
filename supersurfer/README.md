@@ -1,82 +1,56 @@
 # Super Surfer — interactive demo
 
 Live page: https://bardienus.com/supersurfer/
-For local development, serve the repository root and open `/supersurfer/`.
+
 The website deploys through its existing Netlify integration from `master`.
+Serve the repository root locally and open `/supersurfer/`.
 
-Updated for [SuperSurfer 0.1.42 — Workflows in chat](https://github.com/Duisterhof/SuperSurfer/releases/tag/v0.1.42), released October 11, 2026. The installed 0.1.42 app and its released `ui/workflow.js`, `server/workflow_library.py`, and `server/surfboards.py` were inspected for the new workflow interaction and presets. The header, hero, footer, and closing section link to the public [source repository](https://github.com/Duisterhof/SuperSurfer).
+## Page
 
-The page retains the approved Light Modern visual direction and original app
-captures, and adds working local interactions around actual research evidence:
+`index.html`, `concept.css`, and `concept.js` contain the published demo. The
+opening names the problems: repeated agent instructions, disconnected tools,
+and manual GPU coordination. The walkthrough follows one experiment idea through
+a saved Surfboard: Implement → PR → Launch checks → Launch → Monitor / visualize.
+Permissions, workflow requirements, and compute limits are configured beforehand.
 
-- Results: E18/E12 loss histories, logarithmic/linear scale, EMA with raw points
-  retained, run filters, numeric windows, a last-20k shortcut, drag-to-zoom,
-  expanded charts, pointer and keyboard inspection of nearest measured points.
-- Code: editable Monaco models containing unchanged source snapshots from
-  Bart's vla-simple codebase. The implementation and its tests have separate
-  models. The +/− controls and focused-editor Cmd/Ctrl +/− change text size, matching the new release. Selected lines attach to a local instruction draft with file, line,
-  and revision context. Reset restores the original file. The actual VS Code
-  backend and installed extensions remain available in original captures.
-  This static demo's editor is Monaco; it does not start a VS Code backend or
-  load the captured extensions. No draft is sent to an agent.
-- Workflow: a local interactive example of the new chat-and-proposal entry point. Research, software, and writing presets show the views and agent steps. Editable settings stage a proposal; review shows exact changes before application. Named Surfboards and versions last for the page session. Applying to this demo workspace updates the real plot selection; future defaults leave existing plots alone. Selected linked demo tasks use a three-way merge that preserves unrelated local changes, blocks overlapping changes, and supports batch undo. Stale reviews are rejected. Reusable versions omit project GPU/run caps. The demo never generates an AI response, launches work, or connects to actual tasks. Its condensed view cards and small example-task store illustrate the released workflow; they do not embed the full app or its backend.
-- Surfboard: a compact reconstruction of the recorded E19 workflow, embedded
-  under Advanced, directly in the Surfboards section. Nodes can be selected, dragged, or moved
-  with arrow keys. Reset layout preserves configured settings. The inspector
-  changes agent provider/instructions, requirements, compute limits, monitor
-  interval, and which objectives appear in Results. Inspector edits stage a draft for review in the workflow panel; only reviewed application changes the plot selection. Settings last for this
-  page session only. No agents, schedules, or queues are changed.
-- Requirements: a local sample request checker evaluates authorization,
-  exact 40-character commit, recorded PR verification, and finite numeric MFU
-  with explicit percent/fraction units. A positive check does not authenticate
-  any evidence or authorize a job. The fill-example MFU and verification flags
-  are visibly labeled illustrative. MFU remains a manager instruction, not a
-  native scheduler validation gate. Free-form guidance is not machine-validated.
-- LaTeX/GPU views: authentic recorded app captures, with source/PDF and
-  availability/run navigation. No build or job is triggered by this preview.
+The sticky workflow follows the scroll position. Custom analysis has an interactive
+scatter plot with selectable DINO, depth, and track objectives, and measured-point
+inspection. Code, LaTeX, and agent chat tabs show real source and original app
+captures. Surfboard, compute, and workspace captures open at full size.
+
+The example idea and workflow/queue sequences are labeled storyboards. This is
+not a recording of one continuous experiment. No agents, jobs, or builds are run.
 
 ## Evidence
 
-`assets/source/orthogonal_codec.py` and `test_orthogonal_codec.py` are exact
-copies of `simple_vla/orthogonal_codec.py` and `tests/test_orthogonal_codec.py`
-from `/data4/home/bart/src/vla-simple/.worktrees/e12-orthonormal-codec` on tulip,
+`assets/source/orthogonal_codec.py` is an exact copy from
+`/data4/home/bart/src/vla-simple/.worktrees/e12-orthonormal-codec` on tulip,
 revision `111c287c4dd2f4ccf75f5201069226158a90e4b7`, branch
-`e18/sr400-orthogonal-20261008`. This is the observed E18 worktree revision;
-it is not asserted to be the training run's exact launch revision.
-The source snapshots are included as real research code examples.
+`e18/sr400-orthogonal-20261008`. This is the observed research worktree revision,
+not an assertion of the training run's exact launch revision. The demo shows
+lines 30–48 as a real code example.
 
 `experiment-data.json` contains selected numeric E18 and E12 training histories
-read through the workspace's W&B integration on October 9, 2026. Each source
-retains its run ID, URL, observation timestamp, x key, and offset. Histories are
-sampled with recent tail observations merged. The 3,090 bundled source rows
-were checked against the fetched snapshot. No generated observations or
-synthetic evaluation scores are used.
+read through the workspace's W&B integration on October 9, 2026. The 3,090 bundled
+source rows retain their source identities, timestamps, x keys, and offsets.
+The scatter plot uses 1,823 paired observations in the joint-update window
+1,000–84,850. No generated observations or synthetic evaluation scores are used.
 
 E12's joint-codec phase follows 89,738 frozen-PCA predictor updates; E18 starts
-fresh. The visible window ends at E18's last snapshot update (84,850). Equal
-joint-phase updates are not equal total training exposure. These are training
-objectives, not task-success evaluations. EMA is calculated over the complete
-recorded joint phase before the visible window is selected; raw values remain
-available. Run filters affect displayed y limits.
+fresh. Equal joint-phase updates do not mean equal total training exposure.
+These are training objectives, not task-success evaluations.
 
-Captures in `assets/recorded/` come from the running SuperSurfer app on October
-9, 2026. They retain their original UI, including installed extensions,
-compiled proposal, GPU allocation, running jobs, and Surfboard requirements.
-These captures and research examples were approved for publication on October 9, 2026.
+Captures in `assets/recorded/` show the actual Super Surfer app on October 9,
+2026, including the VS Code backend, extensions, LaTeX/PDF, GPU jobs, and Surfboard
+requirements. These captures and research examples were approved for publication
+on October 9. No new internal queue metadata is included.
 
-## Files and checks
+## Validation
 
-- `workspace-demo.js`: original capture navigation and provider banner.
-- `research-plots.js`: numeric history rendering and plot interaction.
-- `interactive-workspace.js`: source editor, local draft, board, and inspector.
-- `workflow-preview.js`: proposal, presets, library versions, scopes, review, and undo UI.
-- `workflow-preview-state.mjs`: isolated draft/review/apply state and conservative three-way merge.
-- `tests/workflow-preview.test.mjs`: meaningful state-boundary tests; run with `node --test supersurfer/tests/workflow-preview.test.mjs` from the repository root.
-- `workflow-preview.css`: Light Modern workflow panel and responsive layouts.
-- `preview-rules.mjs`: pure local sample checks and range validation.
-- `workspace-demo.css`, `interactive-workspace.css`: responsive layout.
-- Existing Monaco bundle in `vendor/monaco/`, with its license notices.
+- Check script syntax with `node --check supersurfer/concept.js`.
+- Check desktop and mobile layout, workflow navigation, analysis metric selection,
+  code and capture tabs, and capture dialogs in the browser.
+- Verify page dependencies exist and load from the same origin.
 
-No authentication material is bundled. Data and editor code load from the
-same origin; the page makes no authenticated requests. Reduced motion
-shows all agent providers statically. The static preview never executes Python.
+The original demo's assets and scripts remain in the repository for reference;
+they are not loaded by the current landing page.
